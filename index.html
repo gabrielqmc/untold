@@ -6,7 +6,6 @@
     
     <!-- SEO Meta Tags -->
     <title>Banda Untold | O Rock que Transforma seu Evento em Jaú-SP</title>
-    <link rel="icon" type="image/x-icon" href="logo.ico">
     <meta name="description" content="A Banda Untold leva a energia de um show ao vivo para bares, casamentos, eventos corporativos e festivais em Jaú e região. Clássicos do Rock Nacional e Internacional.">
     <meta name="keywords" content="Banda de Rock, Banda para Casamento, Banda para Eventos, Rock Nacional, Rock Internacional, Jaú, SP, Música ao Vivo, Contratar Banda">
     <meta name="author" content="Banda Untold">
@@ -17,6 +16,7 @@
     <meta property="og:url" content="https://www.bandauntold.com.br/">
     <meta property="og:title" content="Banda Untold | Experiência Inesquecível de Rock">
     <meta property="og:description" content="Dos clássicos que marcaram gerações aos grandes sucessos do rock. Contrate a Banda Untold para seu evento em Jaú e região.">
+    <!-- Atualizado para a foto de capa (head1.png) -->
     <meta property="og:image" content="head1.png">
 
     <!-- Twitter -->
@@ -24,7 +24,11 @@
     <meta property="twitter:url" content="https://www.bandauntold.com.br/">
     <meta property="twitter:title" content="Banda Untold | Experiência Inesquecível de Rock">
     <meta property="twitter:description" content="Dos clássicos que marcaram gerações aos grandes sucessos do rock. Contrate a Banda Untold para seu evento em Jaú e região.">
+    <!-- Atualizado para a foto de capa (head1.png) -->
     <meta property="twitter:image" content="head1.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo.ico">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +63,7 @@
                         body: ['"Manrope"', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(11, 11, 11, 0.4), rgba(11, 11, 11, 1)), url('head1.png')",
+                        'hero-pattern': "linear-gradient(to bottom, rgba(11, 11, 11, 0.4), rgba(11, 11, 11, 0.95)), url('head1.png')",
                         'cta-pattern': "linear-gradient(to right, rgba(11, 11, 11, 0.9), rgba(11, 11, 11, 0.7)), url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&q=80&w=1920')",
                     }
                 }
@@ -67,12 +71,27 @@
         }
     </script>
 
-    <!-- Custom CSS for Animations & Refinements -->
+    <!-- Custom CSS for Animations & Fixes -->
     <style>
-        body {
+        /* Correções vitais e agressivas para Safari no iOS (previne o "quadrado branco" e bugs de toque) */
+        *, *::before, *::after {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+            -webkit-tap-highlight-color: transparent !important;
+            outline: none !important;
+        }
+        
+        *:focus, *:active, *:focus-visible {
+            outline: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+        
+        html, body {
             background-color: #0B0B0B;
             color: #F8F8F8;
             overflow-x: hidden;
+            width: 100%;
+            position: relative;
         }
         
         /* Custom Scrollbar */
@@ -130,13 +149,7 @@
             column-gap: 1rem;
         }
         @media (min-width: 640px) { .masonry { column-count: 2; } }
-        @media (min-width: 1024px) { .masonry { column-count: 3; } }
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 1rem;
-        }
-
-        /* Timeline */
+        /* Timelines */
         .timeline-container::before {
             content: '';
             position: absolute;
@@ -163,7 +176,7 @@
       "name": "Banda Untold",
       "genre": ["Rock", "Rock Nacional", "Rock Internacional"],
       "url": "https://www.bandauntold.com.br",
-      "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=1200",
+      "image": "head1.png",
       "location": {
         "@type": "Place",
         "address": {
@@ -180,70 +193,71 @@
 
     <!-- Navbar -->
     <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 px-6 lg:px-12 bg-transparent">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="max-w-7xl mx-auto flex justify-between items-center outline-none">
             <!-- Logo -->
-            <a href="#" class="text-2xl font-title font-bold tracking-wider text-textWhite z-50 flex items-center gap-2">
+            <a href="#" class="text-2xl font-title font-bold tracking-wider text-textWhite z-50 flex items-center gap-2 outline-none">
                 <i data-lucide="mic-2" class="text-gold h-6 w-6"></i>
                 UNTOLD<span class="text-gold">.</span>
             </a>
 
             <!-- Desktop Menu -->
             <nav class="hidden lg:flex items-center gap-8">
-                <a href="#sobre" class="text-sm font-medium text-textGray hover:text-gold transition-colors">A Banda</a>
-                <a href="#repertorio" class="text-sm font-medium text-textGray hover:text-gold transition-colors">Repertório</a>
-                <a href="#servicos" class="text-sm font-medium text-textGray hover:text-gold transition-colors">Serviços</a>
-                <a href="#videos" class="text-sm font-medium text-textGray hover:text-gold transition-colors">Vídeos</a>
-                <a href="#agenda" class="text-sm font-medium text-textGray hover:text-gold transition-colors">Agenda</a>
-                <a href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="bg-gold hover:bg-gold-light text-bg1 font-bold py-2.5 px-6 rounded-full transition-all transform hover:scale-105 hover-gold-shadow flex items-center gap-2">
+                <a href="#sobre" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">A Banda</a>
+                <a href="#repertorio" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">Repertório</a>
+                <a href="#servicos" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">Serviços</a>
+                <a href="#videos" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">Vídeos</a>
+                <a href="#agenda" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">Agenda</a>
+                <a href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="bg-gold hover:bg-gold-light text-bg1 font-bold py-2.5 px-6 rounded-full transition-all transform hover:scale-105 hover-gold-shadow flex items-center gap-2 outline-none">
                     <i data-lucide="calendar" class="w-4 h-4"></i>
                     Orçamento
                 </a>
             </nav>
 
             <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-btn" class="lg:hidden z-50 text-textWhite focus:outline-none">
+            <button id="mobile-menu-btn" class="lg:hidden z-50 text-textWhite focus:outline-none outline-none">
                 <i data-lucide="menu" class="w-8 h-8" id="menu-icon"></i>
             </button>
         </div>
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="fixed inset-0 bg-bg1/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300 z-40">
-            <a href="#sobre" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold">A Banda</a>
-            <a href="#repertorio" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold">Repertório</a>
-            <a href="#servicos" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold">Serviços</a>
-            <a href="#videos" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold">Vídeos</a>
-            <a href="#agenda" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold">Agenda</a>
-            <a href="https://wa.me/5514997256404" target="_blank" class="bg-gold text-bg1 font-bold py-3 px-8 rounded-full text-lg w-3/4 max-w-xs text-center flex justify-center items-center gap-2">
+            <a href="#sobre" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">A Banda</a>
+            <a href="#repertorio" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">Repertório</a>
+            <a href="#servicos" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">Serviços</a>
+            <a href="#videos" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">Vídeos</a>
+            <a href="#agenda" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">Agenda</a>
+            <a href="https://wa.me/5514997256404" target="_blank" class="bg-gold text-bg1 font-bold py-3 px-8 rounded-full text-lg w-3/4 max-w-xs text-center flex justify-center items-center gap-2 outline-none">
                 <i data-lucide="message-circle" class="w-5 h-5"></i>
                 Solicitar Orçamento
             </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image/Overlay -->
-        <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed"></div>
+    <!-- Hero Section (Atualizado para evitar cortes e glitchs de renderização no mobile) -->
+    <section class="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden pt-32 pb-24 w-full outline-none">
+        <!-- Background Image/Overlay (bg-fixed removido no mobile para prevenir bugs do Safari) -->
+        <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"></div>
         
-        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto mt-20">
-            <div class="reveal">
-                <span class="inline-block py-1 px-3 rounded-full border border-gold/30 text-gold text-xs sm:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm bg-black/20">
+        <div class="relative z-10 text-center px-4 sm:px-6 w-full max-w-5xl mx-auto outline-none flex flex-col items-center">
+            <div class="reveal w-full outline-none">
+                <span class="inline-block py-1 px-3 rounded-full border border-gold/30 text-gold text-xs sm:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm bg-black/20 outline-none">
                     Banda de Rock • Jaú/SP
                 </span>
-                <h1 class="font-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 glow-text">
+                <h1 class="font-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 glow-text outline-none">
                     O ROCK QUE TRANSFORMA QUALQUER EVENTO EM UMA <span class="text-gold block mt-2">EXPERIÊNCIA INESQUECÍVEL.</span>
                 </h1>
-                <p class="text-textGray text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                <p class="text-textGray text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-light outline-none">
                     Dos clássicos que marcaram gerações aos grandes sucessos. Levamos um show cheio de energia para bares, casamentos, eventos corporativos e festivais. <br class="hidden md:block">
                     <span class="text-white font-medium mt-4 block text-sm sm:text-base">Pearl Jam • Charlie Brown Jr. • Led Zeppelin • Queen • Guns N' Roses • AC/DC e mais.</span>
                 </p>
                 
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-                    <a href="https://wa.me/5514997256404" target="_blank" class="w-full sm:w-auto bg-gold hover:bg-gold-light text-bg1 font-bold text-lg py-4 px-8 rounded-full transition-all transform hover:scale-105 hover-gold-shadow flex items-center justify-center gap-2">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto outline-none">
+                    <a href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="w-full sm:w-auto bg-gold hover:bg-gold-light text-bg1 font-bold text-lg py-4 px-8 rounded-full transition-all transform hover:scale-105 hover-gold-shadow flex items-center justify-center gap-2 outline-none">
                         <i data-lucide="message-square" class="w-5 h-5"></i>
                         Solicitar Orçamento
                     </a>
-                    <a href="#repertorio" class="w-full sm:w-auto bg-transparent border border-white/20 hover:border-gold hover:text-gold text-white font-bold text-lg py-4 px-8 rounded-full transition-all flex items-center justify-center gap-2">
+                    <!-- Este botão agora não será cortado no mobile -->
+                    <a href="#repertorio" class="w-full sm:w-auto bg-white/5 border border-white/20 hover:border-gold hover:text-gold text-white font-bold text-lg py-4 px-8 rounded-full transition-all flex items-center justify-center gap-2 outline-none">
                         Conheça o Repertório
                     </a>
                 </div>
@@ -251,14 +265,14 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <a href="#credibilidade" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 hover:text-gold transition-colors animate-bounce">
+        <a href="#credibilidade" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 hover:text-gold transition-colors animate-bounce outline-none">
             <span class="text-xs tracking-widest uppercase font-title">Scroll</span>
             <i data-lucide="chevron-down" class="w-5 h-5"></i>
         </a>
     </section>
 
     <!-- Credibility Banner -->
-    <section id="credibilidade" class="py-12 bg-bg2 relative z-20 border-b border-white/5">
+    <section id="credibilidade" class="py-12 bg-bg2 relative z-20 border-b border-white/5 outline-none">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div class="reveal glass p-6 rounded-2xl">
                 <h3 class="text-3xl md:text-4xl font-title font-bold text-gold mb-2">+100</h3>
@@ -280,12 +294,12 @@
     </section>
 
     <!-- About Section -->
-    <section id="sobre" class="py-24 relative">
+    <section id="sobre" class="py-24 relative outline-none">
         <div class="absolute right-0 top-1/4 w-96 h-96 bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             <div class="relative reveal">
                 <div class="absolute inset-0 bg-gold/20 rounded-3xl transform translate-x-4 translate-y-4"></div>
-                <img src="Foto%201.png" onerror="this.onerror=null; this.src='https://placehold.co/800x500/151515/D4AF37?text=Foto+1';" alt="Banda Untold no Palco" class="relative rounded-3xl shadow-2xl object-cover w-full h-[500px]" loading="lazy">
+                <img src="Foto%201.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/0B0B0B/D4AF37?text=Foto+Banda';" alt="Banda Untold no Palco" class="relative rounded-3xl shadow-2xl object-cover w-full h-[500px]" loading="lazy">
             </div>
             <div class="reveal">
                 <h2 class="font-title text-3xl md:text-5xl font-bold mb-6">A <span class="text-gold">Energia</span> do Palco, Onde Você Estiver.</h2>
@@ -300,7 +314,7 @@
                     <li class="flex items-center gap-3 text-white"><i data-lucide="check-circle-2" class="text-gold w-5 h-5"></i> Som e Iluminação Próprios (Opcional)</li>
                     <li class="flex items-center gap-3 text-white"><i data-lucide="check-circle-2" class="text-gold w-5 h-5"></i> Repertório Ajustável ao seu Público</li>
                 </ul>
-                <a href="https://wa.me/5514997256404" target="_blank" class="inline-flex items-center gap-2 bg-white text-bg1 hover:bg-gold hover:text-bg1 font-bold py-4 px-8 rounded-full transition-all">
+                <a href="https://wa.me/5514997256404" target="_blank" class="inline-flex items-center gap-2 bg-white text-bg1 hover:bg-gold hover:text-bg1 font-bold py-4 px-8 rounded-full transition-all outline-none">
                     Quero um show para meu evento
                     <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </a>
@@ -309,7 +323,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="servicos" class="py-24 bg-bg2 relative">
+    <section id="servicos" class="py-24 bg-bg2 relative outline-none">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                 <h2 class="font-title text-3xl md:text-5xl font-bold mb-4">Onde <span class="text-gold">Tocamos?</span></h2>
@@ -318,7 +332,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Service Cards -->
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2">
+                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none">
                     <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
                         <i data-lucide="beer" class="text-gold w-7 h-7"></i>
                     </div>
@@ -326,7 +340,7 @@
                     <p class="text-textGray text-sm leading-relaxed">Show de longa duração focado em manter a galera consumindo, cantando e garantindo a casa cheia.</p>
                 </div>
 
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2" style="transition-delay: 100ms;">
+                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none" style="transition-delay: 100ms;">
                     <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
                         <i data-lucide="heart-handshake" class="text-gold w-7 h-7"></i>
                     </div>
@@ -334,7 +348,7 @@
                     <p class="text-textGray text-sm leading-relaxed">Fugimos do clichê. Uma festa de casamento épica com uma banda de rock de verdade para convidados inesquecíveis.</p>
                 </div>
 
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2" style="transition-delay: 200ms;">
+                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none" style="transition-delay: 200ms;">
                     <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
                         <i data-lucide="building-2" class="text-gold w-7 h-7"></i>
                     </div>
@@ -342,7 +356,7 @@
                     <p class="text-textGray text-sm leading-relaxed">Confraternizações de empresas ganham vida e energia com um show profissional que quebra o gelo.</p>
                 </div>
 
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2">
+                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none">
                     <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
                         <i data-lucide="ticket" class="text-gold w-7 h-7"></i>
                     </div>
@@ -350,7 +364,7 @@
                     <p class="text-textGray text-sm leading-relaxed">Presença de palco marcante e peso sonoro para palcos de grande porte e festivais abertos.</p>
                 </div>
 
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2" style="transition-delay: 100ms;">
+                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none" style="transition-delay: 100ms;">
                     <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
                         <i data-lucide="bike" class="text-gold w-7 h-7"></i>
                     </div>
@@ -358,10 +372,10 @@
                     <p class="text-textGray text-sm leading-relaxed">O autêntico espírito rock and roll em encontros de motociclistas, com repertório pesado e direto.</p>
                 </div>
 
-                <div class="glass-gold p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2" style="transition-delay: 200ms;">
+                <div class="glass-gold p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none" style="transition-delay: 200ms;">
                     <h3 class="font-title text-2xl font-bold mb-4 text-gold">Seu Evento</h3>
                     <p class="text-textGray text-sm leading-relaxed mb-6">Seja uma festa particular, aniversário ou evento público, nós fazemos acontecer.</p>
-                    <a href="https://wa.me/5514997256404" target="_blank" class="text-white hover:text-gold font-bold flex items-center gap-2 transition-colors">
+                    <a href="https://wa.me/5514997256404" target="_blank" class="text-white hover:text-gold font-bold flex items-center gap-2 transition-colors outline-none">
                         Falar com a banda <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
@@ -370,7 +384,7 @@
     </section>
 
     <!-- Repertoire Section -->
-    <section id="repertorio" class="py-24 relative overflow-hidden">
+    <section id="repertorio" class="py-24 relative overflow-hidden outline-none">
         <div class="absolute left-0 top-1/2 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[150px] pointer-events-none transform -translate-y-1/2"></div>
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
@@ -426,7 +440,7 @@
             
             <div class="mt-16 text-center reveal">
                 <p class="text-textGray mb-6 text-sm">Tem alguma música especial? Nós incluímos para o seu evento!</p>
-                <a href="https://wa.me/5514997256404" target="_blank" class="inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-bg1 font-bold py-3 px-8 rounded-full transition-all">
+                <a href="https://wa.me/5514997256404" target="_blank" class="inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-bg1 font-bold py-3 px-8 rounded-full transition-all outline-none">
                     Solicitar Setlist Completo
                 </a>
             </div>
@@ -434,23 +448,23 @@
     </section>
 
     <!-- Videos Section -->
-    <section id="videos" class="py-24 bg-bg2">
+    <section id="videos" class="py-24 bg-bg2 outline-none">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
                 <div class="max-w-2xl">
                     <h2 class="font-title text-3xl md:text-5xl font-bold mb-4">Assista e <span class="text-gold">Sinta a Vibe</span></h2>
                     <p class="text-textGray">Nada melhor do que ver a banda em ação para entender a energia que entregamos.</p>
                 </div>
-                <a href="https://www.youtube.com/@bandauntold" target="_blank" class="hidden md:flex items-center gap-2 text-white hover:text-gold transition-colors pb-2">
+                <a href="https://www.youtube.com/@bandauntold" target="_blank" class="hidden md:flex items-center gap-2 text-white hover:text-gold transition-colors pb-2 outline-none">
                     Ver canal no YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
 
             <!-- Videos Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Video 1 (Simulated for perfomance) -->
-                <a href="https://www.youtube.com/shorts/kqoFHmFWBcc" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-video reveal block">
-                    <img src="capa1.png" onerror="this.onerror=null; this.src='https://placehold.co/600x338/151515/D4AF37?text=Capa+1';" alt="Banda Untold Show" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                <!-- Video 1 -->
+                <a href="https://www.youtube.com/shorts/kqoFHmFWBcc" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-video reveal block outline-none">
+                    <img src="capa1.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x338/0B0B0B/D4AF37?text=Video+1';" alt="Mulher de Fases" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                     <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex items-center justify-center">
                         <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
                             <i data-lucide="play" class="text-bg1 w-8 h-8 ml-1"></i>
@@ -463,8 +477,8 @@
                 </a>
 
                 <!-- Video 2 -->
-                <a href="https://www.youtube.com/shorts/2W55C2K_ibc" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-video reveal block" style="transition-delay: 100ms;">
-                    <img src="capa2.png" onerror="this.onerror=null; this.src='https://placehold.co/600x338/151515/D4AF37?text=Capa+2';" alt="Banda Untold Casamento" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                <a href="https://www.youtube.com/shorts/2W55C2K_ibc" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-video reveal block outline-none" style="transition-delay: 100ms;">
+                    <img src="capa2.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x338/0B0B0B/D4AF37?text=Video+2';" alt="War Pigs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                     <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex items-center justify-center">
                         <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
                             <i data-lucide="play" class="text-bg1 w-8 h-8 ml-1"></i>
@@ -477,8 +491,8 @@
                 </a>
 
                 <!-- Video 3 -->
-                <a href="https://www.youtube.com/shorts/QZCnOxacnCM" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-video reveal block" style="transition-delay: 200ms;">
-                    <img src="capa3.png" onerror="this.onerror=null; this.src='https://placehold.co/600x338/151515/D4AF37?text=Capa+3';" alt="Banda Untold Pub" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                <a href="https://www.youtube.com/shorts/QZCnOxacnCM" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-video reveal block outline-none" style="transition-delay: 200ms;">
+                    <img src="capa3.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x338/0B0B0B/D4AF37?text=Video+3';" alt="Proibida Pra Mim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                     <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex items-center justify-center">
                         <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
                             <i data-lucide="play" class="text-bg1 w-8 h-8 ml-1"></i>
@@ -492,15 +506,15 @@
             </div>
             
             <div class="mt-8 text-center md:hidden">
-                 <a href="https://www.youtube.com/@bandauntold" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-gold transition-colors font-bold">
-                    Ver mais no YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                 <a href="https://www.youtube.com/@bandauntold" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-gold transition-colors font-bold outline-none">
+                    Ver canal no YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Gallery & Differentials Section (Split Layout) -->
-    <section class="py-24 relative overflow-hidden">
+    <!-- Gallery & Differentials Section -->
+    <section class="py-24 relative overflow-hidden outline-none">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-5 gap-16">
             
             <!-- Differentials Timeline -->
@@ -535,24 +549,24 @@
                 </div>
             </div>
 
-            <!-- Masonry Gallery -->
+            <!-- Masonry Gallery (Updated with the new 4 images) -->
             <div class="lg:col-span-3 reveal" style="transition-delay: 200ms;">
                 <h2 class="font-title text-3xl font-bold mb-8 text-center lg:text-left hidden lg:block text-transparent selection:bg-transparent">Galeria</h2>
-                <div class="masonry">
-                    <div class="masonry-item group relative overflow-hidden rounded-xl">
-                        <img src="Foto%202.png" onerror="this.onerror=null; this.src='https://placehold.co/500x700/151515/D4AF37?text=Foto+2';" alt="Vocalista" class="w-full transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="group relative overflow-hidden rounded-xl h-64">
+                        <img src="Foto%202.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500/0B0B0B/D4AF37?text=Foto+2';" alt="Banda Untold Ao Vivo" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-gold/20 transition-colors duration-500"></div>
                     </div>
-                    <div class="masonry-item group relative overflow-hidden rounded-xl">
-                        <img src="Foto%203.png" onerror="this.onerror=null; this.src='https://placehold.co/600x400/151515/D4AF37?text=Foto+3';" alt="Guitarrista" class="w-full transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="group relative overflow-hidden rounded-xl h-64">
+                        <img src="Foto%203.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500/0B0B0B/D4AF37?text=Foto+3';" alt="Galera Animada" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-gold/20 transition-colors duration-500"></div>
                     </div>
-                    <div class="masonry-item group relative overflow-hidden rounded-xl">
-                        <img src="Foto%204.png" onerror="this.onerror=null; this.src='https://placehold.co/500x500/151515/D4AF37?text=Foto+4';" alt="Palco" class="w-full transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="group relative overflow-hidden rounded-xl h-64">
+                        <img src="Foto%204.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500/0B0B0B/D4AF37?text=Foto+4';" alt="Bastidores" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-gold/20 transition-colors duration-500"></div>
                     </div>
-                    <div class="masonry-item group relative overflow-hidden rounded-xl">
-                        <img src="Foto%205.png" onerror="this.onerror=null; this.src='https://placehold.co/600x600/151515/D4AF37?text=Foto+5';" alt="Banda Completa" class="w-full transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="group relative overflow-hidden rounded-xl h-64">
+                        <img src="Foto%205.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500/0B0B0B/D4AF37?text=Foto+5';" alt="Show" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-gold/20 transition-colors duration-500"></div>
                     </div>
                 </div>
@@ -561,7 +575,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-24 bg-bg2 relative border-t border-b border-white/5">
+    <section class="py-24 bg-bg2 relative border-t border-b border-white/5 outline-none">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                 <h2 class="font-title text-3xl md:text-5xl font-bold mb-4">O que <span class="text-gold">dizem sobre nós</span></h2>
@@ -583,7 +597,7 @@
                         <p class="text-textGray italic mb-6">"Pessoal da Untold sempre foi excelente aqui no Casarão, muito parceiros e sabem chamar a galera, recomendo a todos."</p>
                     </div>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-lg font-bold">H</div>
+                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-lg font-bold text-white">H</div>
                         <div>
                             <h5 class="font-title font-bold text-white">Hermes Furlaneto</h5>
                             <p class="text-xs text-gold">Casarão 682 - Jaú/SP</p>
@@ -604,7 +618,7 @@
                         <p class="text-textGray italic mb-6">"Foi um SHOW do começo ao fim, pessoal sempre animado e sempre sons que me trazem aquele sentimento de nostalgia."</p>
                     </div>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-lg font-bold">E</div>
+                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-lg font-bold text-white">E</div>
                         <div>
                             <h5 class="font-title font-bold text-white">Eduardo Campanhã</h5>
                             <p class="text-xs text-gold">Bar da Adelaide - Jaú/SP</p>
@@ -625,7 +639,7 @@
                         <p class="text-textGray italic mb-6">"A Untold já é da casa, sempre que posso chamo, fazem um som que é difícil ver nas bandas mais novas de hoje em dia."</p>
                     </div>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-lg font-bold">G</div>
+                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-lg font-bold text-white">G</div>
                         <div>
                             <h5 class="font-title font-bold text-white">Gabriel Atalla</h5>
                             <p class="text-xs text-gold">Jimi's Bar - Jaú/SP</p>
@@ -638,7 +652,7 @@
     </section>
 
     <!-- Agenda & FAQ Section -->
-    <section id="agenda" class="py-24 relative">
+    <section id="agenda" class="py-24 relative outline-none">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
             
             <!-- Agenda -->
@@ -648,12 +662,12 @@
                     Próximos <span class="text-gold">Shows</span>
                 </h2>
                 
-                <div class="glass p-8 rounded-2xl text-center border-dashed border-2 border-white/10">
+                <div class="glass p-8 rounded-2xl text-center border-dashed border-2 border-white/10 outline-none">
                     <i data-lucide="calendar-clock" class="w-12 h-12 text-white/30 mx-auto mb-4"></i>
                     <h4 class="font-title text-xl font-bold mb-2">Agenda em atualização</h4>
                     <p class="text-textGray text-sm">Novas datas serão divulgadas em breve. Siga nosso Instagram para acompanhar.</p>
-                    <a href="https://www.instagram.com/banda.untold/" target="_blank" class="inline-flex items-center gap-2 mt-6 text-gold hover:text-white transition-colors">
-                        <i data-lucide="instagram" class="w-4 h-4"></i> @bandauntold
+                    <a href="https://www.instagram.com/banda.untold/" target="_blank" class="inline-flex items-center gap-2 mt-6 text-gold hover:text-white transition-colors outline-none">
+                        <i data-lucide="instagram" class="w-4 h-4"></i> @banda.untold
                     </a>
                 </div>
             </div>
@@ -667,8 +681,8 @@
                 
                 <div class="space-y-4">
                     <!-- FAQ Item 1 -->
-                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors">
+                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden outline-none">
+                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors outline-none">
                             Quanto tempo dura o show?
                             <span class="transition group-open:rotate-180">
                                 <i data-lucide="chevron-down" class="w-5 h-5"></i>
@@ -680,8 +694,8 @@
                     </details>
                     
                     <!-- FAQ Item 2 -->
-                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors">
+                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden outline-none">
+                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors outline-none">
                             Vocês levam equipamento de som e luz?
                             <span class="transition group-open:rotate-180">
                                 <i data-lucide="chevron-down" class="w-5 h-5"></i>
@@ -693,8 +707,8 @@
                     </details>
 
                     <!-- FAQ Item 3 -->
-                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors">
+                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden outline-none">
+                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors outline-none">
                             Atendem outras cidades além de Jaú?
                             <span class="transition group-open:rotate-180">
                                 <i data-lucide="chevron-down" class="w-5 h-5"></i>
@@ -706,8 +720,8 @@
                     </details>
 
                     <!-- FAQ Item 4 -->
-                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors">
+                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden outline-none">
+                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors outline-none">
                             Posso escolher músicas pro repertório?
                             <span class="transition group-open:rotate-180">
                                 <i data-lucide="chevron-down" class="w-5 h-5"></i>
@@ -723,12 +737,12 @@
     </section>
 
     <!-- Final CTA Section (Cinematic) -->
-    <section class="relative py-32 flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-cta-pattern bg-cover bg-center bg-fixed"></div>
-        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto reveal">
-            <h2 class="font-title text-4xl md:text-6xl font-bold mb-6 glow-text">PRONTO PARA LEVAR O ROCK <br class="hidden md:block"> PARA O SEU EVENTO?</h2>
-            <p class="text-textGray text-lg md:text-xl mb-10">Datas concorridas. Consulte nossa disponibilidade e garanta a energia da Banda Untold na sua festa.</p>
-            <a href="https://wa.me/5514997256404?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento%20da%20Banda%20Untold." target="_blank" class="inline-flex items-center justify-center gap-3 bg-whatsapp hover:bg-green-500 text-white font-bold text-xl py-5 px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.4)]">
+    <section class="relative py-32 flex items-center justify-center overflow-hidden outline-none">
+        <div class="absolute inset-0 bg-cta-pattern bg-cover bg-center bg-scroll md:bg-fixed"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto reveal outline-none">
+            <h2 class="font-title text-4xl md:text-6xl font-bold mb-6 glow-text outline-none">PRONTO PARA LEVAR O ROCK <br class="hidden md:block"> PARA O SEU EVENTO?</h2>
+            <p class="text-textGray text-lg md:text-xl mb-10 outline-none">Datas concorridas. Consulte nossa disponibilidade e garanta a energia da Banda Untold na sua festa.</p>
+            <a href="https://wa.me/5514997256404?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento%20da%20Banda%20Untold." target="_blank" class="inline-flex items-center justify-center gap-3 bg-whatsapp hover:bg-green-500 text-white font-bold text-xl py-5 px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.4)] outline-none">
                 <i data-lucide="message-circle" class="w-6 h-6"></i>
                 Chamar no WhatsApp
             </a>
@@ -736,58 +750,58 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-bg1 pt-16 pb-8 border-t border-white/10 text-center md:text-left relative z-20">
+    <footer class="bg-bg1 pt-16 pb-8 border-t border-white/10 text-center md:text-left relative z-20 outline-none">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 mb-12">
-            <div class="md:col-span-1">
-                <a href="#" class="text-3xl font-title font-bold tracking-wider text-textWhite mb-4 flex items-center justify-center md:justify-start gap-2">
+            <div class="md:col-span-1 outline-none">
+                <a href="#" class="text-3xl font-title font-bold tracking-wider text-textWhite mb-4 flex items-center justify-center md:justify-start gap-2 outline-none">
                     <i data-lucide="mic-2" class="text-gold h-8 w-8"></i>
                     UNTOLD<span class="text-gold">.</span>
                 </a>
-                <p class="text-textGray text-sm mb-6">Transformando eventos em experiências inesquecíveis com o melhor do Rock.</p>
+                <p class="text-textGray text-sm mb-6 outline-none">Transformando eventos em experiências inesquecíveis com o melhor do Rock.</p>
             </div>
             
-            <div>
+            <div class="outline-none">
                 <h4 class="font-title font-bold text-white mb-4">Navegação</h4>
                 <ul class="space-y-2 text-sm text-textGray">
-                    <li><a href="#sobre" class="hover:text-gold transition-colors">A Banda</a></li>
-                    <li><a href="#repertorio" class="hover:text-gold transition-colors">Repertório</a></li>
-                    <li><a href="#servicos" class="hover:text-gold transition-colors">Serviços</a></li>
-                    <li><a href="#videos" class="hover:text-gold transition-colors">Vídeos</a></li>
+                    <li><a href="#sobre" class="hover:text-gold transition-colors outline-none">A Banda</a></li>
+                    <li><a href="#repertorio" class="hover:text-gold transition-colors outline-none">Repertório</a></li>
+                    <li><a href="#servicos" class="hover:text-gold transition-colors outline-none">Serviços</a></li>
+                    <li><a href="#videos" class="hover:text-gold transition-colors outline-none">Vídeos</a></li>
                 </ul>
             </div>
             
-            <div>
+            <div class="outline-none">
                 <h4 class="font-title font-bold text-white mb-4">Contato</h4>
                 <ul class="space-y-2 text-sm text-textGray">
-                    <li class="flex items-center justify-center md:justify-start gap-2">
+                    <li class="flex items-center justify-center md:justify-start gap-2 outline-none">
                         <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i> Jaú-SP e Região
                     </li>
-                    <li class="flex items-center justify-center md:justify-start gap-2">
+                    <li class="flex items-center justify-center md:justify-start gap-2 outline-none">
                         <i data-lucide="phone" class="w-4 h-4 text-gold"></i> (14) 99725-6404
                     </li>
-                    <li class="flex items-center justify-center md:justify-start gap-2">
+                    <li class="flex items-center justify-center md:justify-start gap-2 outline-none">
                         <i data-lucide="mail" class="w-4 h-4 text-gold"></i> bandaustories@gmail.com
                     </li>
                 </ul>
             </div>
             
-            <div>
+            <div class="outline-none">
                 <h4 class="font-title font-bold text-white mb-4">Redes Sociais</h4>
                 <div class="flex items-center justify-center md:justify-start gap-4">
-                    <a href="https://www.instagram.com/banda.untold/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-bg1 transition-colors text-white">
+                    <a href="https://www.instagram.com/banda.untold/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-bg1 transition-colors text-white outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </a>
-                    <a href="https://www.youtube.com/@bandauntold" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-bg1 transition-colors text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.1C2.6 5.9 3.5 5 4.7 4.9 7 4.5 12 4.5 12 4.5s5 0 7.3.4c1.2.1 2.1 1 2.2 2.2.4 2.4.4 4.9.4 4.9s0 2.5-.4 4.9c-.1 1.2-1 2.1-2.2 2.2-2.3.4-7.3.4-7.3.4s-5 0-7.3-.4c-1.2-.1-2.1-1-2.2-2.2C2 14.4 2 11.9 2 11.9s0-2.5.5-4.8z"/><path d="m10 15 5-3-5-3z"/></svg>
+                    <a href="https://www.youtube.com/@bandauntold" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-bg1 transition-colors text-white outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
                     </a>
-                    <a href="https://www.facebook.com/banda.untold" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-bg1 transition-colors text-white">
+                    <a href="https://www.facebook.com/banda.untold" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-bg1 transition-colors text-white outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                     </a>
                 </div>
             </div>
         </div>
         
-        <div class="text-center text-xs text-white/30 border-t border-white/5 pt-8">
+        <div class="text-center text-xs text-white/30 border-t border-white/5 pt-8 outline-none">
             <p>&copy; 2026 Banda Untold. Todos os direitos reservados. Jaú-SP.</p>
         </div>
     </footer>
@@ -795,12 +809,12 @@
     <!-- Fixed Elements -->
     
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20um%20orçamento." target="_blank" class="fixed bottom-6 right-6 z-50 bg-whatsapp hover:bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] transform hover:scale-110 transition-all animate-bounce" style="animation-duration: 3s;" aria-label="Fale conosco no WhatsApp">
+    <a href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20um%20orçamento." target="_blank" class="fixed bottom-6 right-6 z-50 bg-whatsapp hover:bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] transform hover:scale-110 transition-all animate-bounce outline-none" style="animation-duration: 3s;" aria-label="Fale conosco no WhatsApp">
         <i data-lucide="message-circle" class="w-7 h-7"></i>
     </a>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-24 right-6 z-40 bg-white/10 hover:bg-gold backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 focus:outline-none" aria-label="Voltar ao topo">
+    <button id="back-to-top" class="fixed bottom-24 right-6 z-40 bg-white/10 hover:bg-gold backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 outline-none" aria-label="Voltar ao topo">
         <i data-lucide="arrow-up" class="w-5 h-5"></i>
     </button>
 
@@ -895,7 +909,7 @@
             revealOnScroll.observe(element);
         });
 
-        // --- Smooth Scrolling for Anchor Links (fallback/extra protection) ---
+        // --- Smooth Scrolling for Anchor Links ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
