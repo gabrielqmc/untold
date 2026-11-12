@@ -1,174 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0d0c0b">
+    <meta name="color-scheme" content="dark">
+
+    <!-- SEO -->
     <title>Banda Untold | O Rock que Transforma seu Evento em Jaú-SP</title>
     <meta name="description" content="A Banda Untold leva a energia de um show ao vivo para bares, casamentos, eventos corporativos e festivais em Jaú e região. Clássicos do Rock Nacional e Internacional.">
     <meta name="keywords" content="Banda de Rock, Banda para Casamento, Banda para Eventos, Rock Nacional, Rock Internacional, Jaú, SP, Música ao Vivo, Contratar Banda">
     <meta name="author" content="Banda Untold">
     <meta name="robots" content="index, follow">
-    
+    <link rel="canonical" href="https://www.bandauntold.com.br/">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
     <meta property="og:url" content="https://www.bandauntold.com.br/">
     <meta property="og:title" content="Banda Untold | Experiência Inesquecível de Rock">
     <meta property="og:description" content="Dos clássicos que marcaram gerações aos grandes sucessos do rock. Contrate a Banda Untold para seu evento em Jaú e região.">
-    <!-- Atualizado para a foto de capa (head1.png) -->
-    <meta property="og:image" content="head1.png">
+    <meta property="og:image" content="https://www.bandauntold.com.br/assets/img/og-untold.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.bandauntold.com.br/">
-    <meta property="twitter:title" content="Banda Untold | Experiência Inesquecível de Rock">
-    <meta property="twitter:description" content="Dos clássicos que marcaram gerações aos grandes sucessos do rock. Contrate a Banda Untold para seu evento em Jaú e região.">
-    <!-- Atualizado para a foto de capa (head1.png) -->
-    <meta property="twitter:image" content="head1.png">
-    
-    <!-- Favicon -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.bandauntold.com.br/">
+    <meta name="twitter:title" content="Banda Untold | Experiência Inesquecível de Rock">
+    <meta name="twitter:description" content="Dos clássicos que marcaram gerações aos grandes sucessos do rock. Contrate a Banda Untold para seu evento em Jaú e região.">
+    <meta name="twitter:image" content="https://www.bandauntold.com.br/assets/img/og-untold.jpg">
+
+    <!-- Ícones -->
     <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Fontes (auto-hospedadas: Anton, Instrument Serif, Archivo, Space Mono, VT323) -->
+    <link rel="preload" href="assets/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bg1: '#0B0B0B',
-                        bg2: '#151515',
-                        gold: {
-                            DEFAULT: '#D4AF37',
-                            light: '#E8C76A'
-                        },
-                        yellowLight: '#F5D76E',
-                        textWhite: '#F8F8F8',
-                        textGray: '#CFCFCF',
-                        whatsapp: '#25D366'
-                    },
-                    fontFamily: {
-                        title: ['"Space Grotesk"', 'sans-serif'],
-                        body: ['"Manrope"', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(11, 11, 11, 0.4), rgba(11, 11, 11, 0.95)), url('head1.png')",
-                        'cta-pattern': "linear-gradient(to right, rgba(11, 11, 11, 0.9), rgba(11, 11, 11, 0.7)), url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&q=80&w=1920')",
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Imagem principal -->
+    <link rel="preload" as="image" type="image/webp" href="assets/img/bw/head1-1200.webp"
+          imagesrcset="assets/img/bw/head1-800.webp 800w, assets/img/bw/head1-1200.webp 1200w, assets/img/bw/head1.webp 1920w"
+          imagesizes="(max-width: 760px) 100vw, 66vw">
 
-    <!-- Custom CSS for Animations & Fixes -->
-    <style>
-        /* Correções vitais e agressivas para Safari no iOS (previne o "quadrado branco" e bugs de toque) */
-        *, *::before, *::after {
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
-            -webkit-tap-highlight-color: transparent !important;
-            outline: none !important;
-        }
-        
-        *:focus, *:active, *:focus-visible {
-            outline: none !important;
-            -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-        }
-        
-        html, body {
-            background-color: #0B0B0B;
-            color: #F8F8F8;
-            overflow-x: hidden;
-            width: 100%;
-            position: relative;
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0B0B0B;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #D4AF37;
-        }
+    <link rel="stylesheet" href="assets/css/style.css">
 
-        /* Glassmorphism Classes */
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .glass-gold {
-            background: rgba(212, 175, 55, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
 
-        /* Scroll Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Micro-animations */
-        .hover-gold-shadow:hover {
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-        }
-        
-        .glow-text {
-            text-shadow: 0 0 30px rgba(245, 215, 110, 0.3);
-        }
-
-        /* Masonry Grid for Gallery */
-        .masonry {
-            column-count: 1;
-            column-gap: 1rem;
-        }
-        @media (min-width: 640px) { .masonry { column-count: 2; } }
-        /* Timelines */
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 20px;
-            width: 2px;
-            background: rgba(212, 175, 55, 0.3);
-        }
-        @media (min-width: 768px) {
-            .timeline-container::before { left: 50%; transform: translateX(-50%); }
-        }
-
-        /* Hide scrollbar for carousels */
-        .hide-scroll::-webkit-scrollbar { display: none; }
-        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
-
-    <!-- Schema.org Markup -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -176,7 +57,15 @@
       "name": "Banda Untold",
       "genre": ["Rock", "Rock Nacional", "Rock Internacional"],
       "url": "https://www.bandauntold.com.br",
-      "image": "head1.png",
+      "image": "https://www.bandauntold.com.br/assets/img/og-untold.jpg",
+      "logo": "https://www.bandauntold.com.br/assets/img/logo-u.png",
+      "telephone": "+55-14-99725-6404",
+      "email": "bandaustories@gmail.com",
+      "sameAs": [
+        "https://www.instagram.com/banda.untold/",
+        "https://www.youtube.com/@bandauntold",
+        "https://www.facebook.com/banda.untold"
+      ],
       "location": {
         "@type": "Place",
         "address": {
@@ -189,747 +78,722 @@
     }
     </script>
 </head>
-<body class="font-body antialiased selection:bg-gold selection:text-bg1">
+<body>
 
-    <!-- Navbar -->
-    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 px-6 lg:px-12 bg-transparent">
-        <div class="max-w-7xl mx-auto flex justify-between items-center outline-none">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-title font-bold tracking-wider text-textWhite z-50 flex items-center gap-2 outline-none">
-                <i data-lucide="mic-2" class="text-gold h-6 w-6"></i>
-                UNTOLD<span class="text-gold">.</span>
-            </a>
+<!-- Ícones (sprite SVG) -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z" fill="currentColor"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="M5 5h2.5v14H5zM8.5 12 19 5v14z" fill="currentColor"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="M16.5 5H19v14h-2.5zM15.5 12 5 19V5z" fill="currentColor"/></symbol>
+    <symbol id="i-vol" viewBox="0 0 24 24"><path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M3 5h3v3H3zM8 5.5h13v2H8zM3 10.5h3v3H3zM8 11h13v2H8zM3 16h3v3H3zM8 16.5h13v2H8z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 11h14.2l-5.6-5.6L13 4l8 8-8 8-1.4-1.4 5.6-5.6H3z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M11 21V6.8l-5.6 5.6L4 11l8-8 8 8-1.4 1.4L13 6.8V21z" fill="currentColor"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m5.6 4.2 6.4 6.4 6.4-6.4 1.4 1.4-6.4 6.4 6.4 6.4-1.4 1.4-6.4-6.4-6.4 6.4-1.4-1.4 6.4-6.4-6.4-6.4z" fill="currentColor"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24s8.24 3.7 8.24 8.24-3.7 8.24-8.24 8.24m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 3h18v18H3z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16.6 5.6h2v2h-2z" fill="currentColor"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.6 2.6 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8M10 15V9l5.2 3z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></symbol>
+    <symbol id="i-spotify" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m4.6 14.4a.6.6 0 0 1-.9.2c-2.4-1.5-5.4-1.8-8.9-1a.6.6 0 1 1-.3-1.2c3.9-.9 7.2-.5 9.9 1.1.3.2.4.6.2.9m1.2-2.7a.8.8 0 0 1-1.1.3c-2.7-1.7-6.9-2.2-10.1-1.2a.8.8 0 1 1-.5-1.5c3.7-1.1 8.3-.6 11.4 1.3.4.2.5.7.3 1.1m.1-2.8C14.7 9 9.4 8.8 6.3 9.7a.9.9 0 1 1-.5-1.8c3.5-1.1 9.4-.9 13.1 1.3a.9.9 0 0 1-1 1.7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 5h18v14H3z M3 6l9 7 9-7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5"/></symbol>
+    <symbol id="i-speaker" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="3" d="M10 4h28v40H10z"/><circle cx="24" cy="29" r="9" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="29" r="3" fill="currentColor"/><circle cx="24" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+</svg>
 
-            <!-- Desktop Menu -->
-            <nav class="hidden lg:flex items-center gap-8">
-                <a href="#sobre" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">A Banda</a>
-                <a href="#repertorio" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">Repertório</a>
-                <a href="#servicos" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">Serviços</a>
-                <a href="#videos" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">Vídeos</a>
-                <a href="#agenda" class="text-sm font-medium text-textGray hover:text-gold transition-colors outline-none">Agenda</a>
-                <a href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="bg-gold hover:bg-gold-light text-bg1 font-bold py-2.5 px-6 rounded-full transition-all transform hover:scale-105 hover-gold-shadow flex items-center gap-2 outline-none">
-                    <i data-lucide="calendar" class="w-4 h-4"></i>
-                    Orçamento
-                </a>
-            </nav>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-btn" class="lg:hidden z-50 text-textWhite focus:outline-none outline-none">
-                <i data-lucide="menu" class="w-8 h-8" id="menu-icon"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-bg1/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300 z-40">
-            <a href="#sobre" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">A Banda</a>
-            <a href="#repertorio" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">Repertório</a>
-            <a href="#servicos" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">Serviços</a>
-            <a href="#videos" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">Vídeos</a>
-            <a href="#agenda" class="mobile-link text-2xl font-title font-medium text-textWhite hover:text-gold outline-none">Agenda</a>
-            <a href="https://wa.me/5514997256404" target="_blank" class="bg-gold text-bg1 font-bold py-3 px-8 rounded-full text-lg w-3/4 max-w-xs text-center flex justify-center items-center gap-2 outline-none">
-                <i data-lucide="message-circle" class="w-5 h-5"></i>
-                Solicitar Orçamento
-            </a>
-        </div>
-    </header>
-
-    <!-- Hero Section (Atualizado para evitar cortes e glitchs de renderização no mobile) -->
-    <section class="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden pt-32 pb-24 w-full outline-none">
-        <!-- Background Image/Overlay (bg-fixed removido no mobile para prevenir bugs do Safari) -->
-        <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"></div>
-        
-        <div class="relative z-10 text-center px-4 sm:px-6 w-full max-w-5xl mx-auto outline-none flex flex-col items-center">
-            <div class="reveal w-full outline-none">
-                <span class="inline-block py-1 px-3 rounded-full border border-gold/30 text-gold text-xs sm:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm bg-black/20 outline-none">
-                    Banda de Rock • Jaú/SP
-                </span>
-                <h1 class="font-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 glow-text outline-none">
-                    O ROCK QUE TRANSFORMA QUALQUER EVENTO EM UMA <span class="text-gold block mt-2">EXPERIÊNCIA INESQUECÍVEL.</span>
-                </h1>
-                <p class="text-textGray text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-light outline-none">
-                    Dos clássicos que marcaram gerações aos grandes sucessos. Levamos um show cheio de energia para bares, casamentos, eventos corporativos e festivais. <br class="hidden md:block">
-                    <span class="text-white font-medium mt-4 block text-sm sm:text-base">Pearl Jam • Charlie Brown Jr. • Led Zeppelin • Queen • Guns N' Roses • AC/DC e mais.</span>
-                </p>
-                
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto outline-none">
-                    <a href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="w-full sm:w-auto bg-gold hover:bg-gold-light text-bg1 font-bold text-lg py-4 px-8 rounded-full transition-all transform hover:scale-105 hover-gold-shadow flex items-center justify-center gap-2 outline-none">
-                        <i data-lucide="message-square" class="w-5 h-5"></i>
-                        Solicitar Orçamento
-                    </a>
-                    <!-- Este botão agora não será cortado no mobile -->
-                    <a href="#repertorio" class="w-full sm:w-auto bg-white/5 border border-white/20 hover:border-gold hover:text-gold text-white font-bold text-lg py-4 px-8 rounded-full transition-all flex items-center justify-center gap-2 outline-none">
-                        Conheça o Repertório
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <a href="#credibilidade" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 hover:text-gold transition-colors animate-bounce outline-none">
-            <span class="text-xs tracking-widest uppercase font-title">Scroll</span>
-            <i data-lucide="chevron-down" class="w-5 h-5"></i>
-        </a>
-    </section>
-
-    <!-- Credibility Banner -->
-    <section id="credibilidade" class="py-12 bg-bg2 relative z-20 border-b border-white/5 outline-none">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="reveal glass p-6 rounded-2xl">
-                <h3 class="text-3xl md:text-4xl font-title font-bold text-gold mb-2">+100</h3>
-                <p class="text-textGray text-sm font-medium uppercase tracking-wider">Shows Realizados</p>
-            </div>
-            <div class="reveal glass p-6 rounded-2xl" style="transition-delay: 100ms;">
-                <h3 class="text-3xl md:text-4xl font-title font-bold text-gold mb-2">Região</h3>
-                <p class="text-textGray text-sm font-medium uppercase tracking-wider">Jaú e Interior SP</p>
-            </div>
-            <div class="reveal glass p-6 rounded-2xl" style="transition-delay: 200ms;">
-                <h3 class="text-3xl md:text-4xl font-title font-bold text-gold mb-2">100+</h3>
-                <p class="text-textGray text-sm font-medium uppercase tracking-wider">Músicas no Repertório</p>
-            </div>
-            <div class="reveal glass p-6 rounded-2xl" style="transition-delay: 300ms;">
-                <h3 class="text-3xl md:text-4xl font-title font-bold text-gold mb-2"><i data-lucide="speaker" class="w-8 h-8 mx-auto inline-block"></i></h3>
-                <p class="text-textGray text-sm font-medium uppercase tracking-wider">Equipamento Premium</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="sobre" class="py-24 relative outline-none">
-        <div class="absolute right-0 top-1/4 w-96 h-96 bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-            <div class="relative reveal">
-                <div class="absolute inset-0 bg-gold/20 rounded-3xl transform translate-x-4 translate-y-4"></div>
-                <img src="Foto%201.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/0B0B0B/D4AF37?text=Foto+Banda';" alt="Banda Untold no Palco" class="relative rounded-3xl shadow-2xl object-cover w-full h-[500px]" loading="lazy">
-            </div>
-            <div class="reveal">
-                <h2 class="font-title text-3xl md:text-5xl font-bold mb-6">A <span class="text-gold">Energia</span> do Palco, Onde Você Estiver.</h2>
-                <p class="text-textGray text-lg mb-6 leading-relaxed">
-                    A Banda Untold nasceu da paixão pelo rock verdadeiro. Nosso objetivo não é apenas tocar músicas, mas criar uma atmosfera onde o público canta junto, pula e revive os melhores momentos de suas vidas através de clássicos imortais.
-                </p>
-                <p class="text-textGray text-lg mb-8 leading-relaxed">
-                    Com músicos experientes, equipamentos de ponta e um visual impecável, entregamos um espetáculo completo que se adapta perfeitamente ao seu bar, festival, casamento ou evento corporativo em Jaú e região.
-                </p>
-                <ul class="space-y-4 mb-10">
-                    <li class="flex items-center gap-3 text-white"><i data-lucide="check-circle-2" class="text-gold w-5 h-5"></i> Pontualidade e Profissionalismo</li>
-                    <li class="flex items-center gap-3 text-white"><i data-lucide="check-circle-2" class="text-gold w-5 h-5"></i> Som e Iluminação Próprios (Opcional)</li>
-                    <li class="flex items-center gap-3 text-white"><i data-lucide="check-circle-2" class="text-gold w-5 h-5"></i> Repertório Ajustável ao seu Público</li>
-                </ul>
-                <a href="https://wa.me/5514997256404" target="_blank" class="inline-flex items-center gap-2 bg-white text-bg1 hover:bg-gold hover:text-bg1 font-bold py-4 px-8 rounded-full transition-all outline-none">
-                    Quero um show para meu evento
-                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="servicos" class="py-24 bg-bg2 relative outline-none">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h2 class="font-title text-3xl md:text-5xl font-bold mb-4">Onde <span class="text-gold">Tocamos?</span></h2>
-                <p class="text-textGray text-lg">Adaptamos nossa estrutura e repertório para garantir o sucesso absoluto de qualquer formato de evento.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Service Cards -->
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none">
-                    <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
-                        <i data-lucide="beer" class="text-gold w-7 h-7"></i>
-                    </div>
-                    <h3 class="font-title text-xl font-bold mb-3">Bares e Pubs</h3>
-                    <p class="text-textGray text-sm leading-relaxed">Show de longa duração focado em manter a galera consumindo, cantando e garantindo a casa cheia.</p>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none" style="transition-delay: 100ms;">
-                    <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
-                        <i data-lucide="heart-handshake" class="text-gold w-7 h-7"></i>
-                    </div>
-                    <h3 class="font-title text-xl font-bold mb-3">Casamentos</h3>
-                    <p class="text-textGray text-sm leading-relaxed">Fugimos do clichê. Uma festa de casamento épica com uma banda de rock de verdade para convidados inesquecíveis.</p>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none" style="transition-delay: 200ms;">
-                    <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
-                        <i data-lucide="building-2" class="text-gold w-7 h-7"></i>
-                    </div>
-                    <h3 class="font-title text-xl font-bold mb-3">Corporativo</h3>
-                    <p class="text-textGray text-sm leading-relaxed">Confraternizações de empresas ganham vida e energia com um show profissional que quebra o gelo.</p>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none">
-                    <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
-                        <i data-lucide="ticket" class="text-gold w-7 h-7"></i>
-                    </div>
-                    <h3 class="font-title text-xl font-bold mb-3">Festivais</h3>
-                    <p class="text-textGray text-sm leading-relaxed">Presença de palco marcante e peso sonoro para palcos de grande porte e festivais abertos.</p>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none" style="transition-delay: 100ms;">
-                    <div class="w-14 h-14 bg-black border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-gold/50 transition-colors">
-                        <i data-lucide="bike" class="text-gold w-7 h-7"></i>
-                    </div>
-                    <h3 class="font-title text-xl font-bold mb-3">Motoclubes</h3>
-                    <p class="text-textGray text-sm leading-relaxed">O autêntico espírito rock and roll em encontros de motociclistas, com repertório pesado e direto.</p>
-                </div>
-
-                <div class="glass-gold p-8 rounded-2xl reveal group hover-gold-shadow transition-all duration-300 transform hover:-translate-y-2 outline-none" style="transition-delay: 200ms;">
-                    <h3 class="font-title text-2xl font-bold mb-4 text-gold">Seu Evento</h3>
-                    <p class="text-textGray text-sm leading-relaxed mb-6">Seja uma festa particular, aniversário ou evento público, nós fazemos acontecer.</p>
-                    <a href="https://wa.me/5514997256404" target="_blank" class="text-white hover:text-gold font-bold flex items-center gap-2 transition-colors outline-none">
-                        Falar com a banda <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Repertoire Section -->
-    <section id="repertorio" class="py-24 relative overflow-hidden outline-none">
-        <div class="absolute left-0 top-1/2 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[150px] pointer-events-none transform -translate-y-1/2"></div>
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h2 class="font-title text-3xl md:text-5xl font-bold mb-4">Nosso <span class="text-gold">Repertório</span></h2>
-                <p class="text-textGray text-lg">Os maiores hinos do Rock Nacional e Internacional meticulosamente ensaiados para soar como nas arenas.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Rock Internacional -->
-                <div class="reveal">
-                    <div class="flex items-center gap-4 mb-8 border-b border-white/10 pb-4">
-                        <i data-lucide="globe-2" class="text-gold w-8 h-8"></i>
-                        <h3 class="font-title text-2xl font-bold">Rock Internacional</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Pearl Jam</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Alice in Chains</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Led Zeppelin</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Foo Fighters</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Queen</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">AC/DC</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Bon Jovi</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Guns N' Roses</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Metallica</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Nirvana</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Audioslave</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Creed</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">The Beatles</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">The Rolling Stones</span>
-                    </div>
-                </div>
-
-                <!-- Rock Nacional -->
-                <div class="reveal" style="transition-delay: 200ms;">
-                    <div class="flex items-center gap-4 mb-8 border-b border-white/10 pb-4">
-                        <i data-lucide="map-pin" class="text-gold w-8 h-8"></i>
-                        <h3 class="font-title text-2xl font-bold">Rock Nacional</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Charlie Brown Jr.</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Legião Urbana</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Capital Inicial</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Barão Vermelho</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Titãs</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">CPM22</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Raimundos</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Paralamas do Sucesso</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Skank</span>
-                        <span class="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-gold hover:text-gold transition-colors cursor-default bg-white/5">Frejat</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-16 text-center reveal">
-                <p class="text-textGray mb-6 text-sm">Tem alguma música especial? Nós incluímos para o seu evento!</p>
-                <a href="https://wa.me/5514997256404" target="_blank" class="inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-bg1 font-bold py-3 px-8 rounded-full transition-all outline-none">
-                    Solicitar Setlist Completo
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Videos Section -->
-    <section id="videos" class="py-24 bg-bg2 outline-none">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
-                <div class="max-w-2xl">
-                    <h2 class="font-title text-3xl md:text-5xl font-bold mb-4">Assista e <span class="text-gold">Sinta a Vibe</span></h2>
-                    <p class="text-textGray">Nada melhor do que ver a banda em ação para entender a energia que entregamos.</p>
-                </div>
-                <a href="https://www.youtube.com/@bandauntold" target="_blank" class="hidden md:flex items-center gap-2 text-white hover:text-gold transition-colors pb-2 outline-none">
-                    Ver canal no YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-
-            <!-- Videos Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Video 1 -->
-                <a href="https://www.youtube.com/shorts/kqoFHmFWBcc" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-video reveal block outline-none">
-                    <img src="capa1.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x338/0B0B0B/D4AF37?text=Video+1';" alt="Mulher de Fases" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
-                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                        <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
-                            <i data-lucide="play" class="text-bg1 w-8 h-8 ml-1"></i>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-                        <h4 class="font-title font-bold text-lg">Mulher de Fases - Raimundos</h4>
-                        <p class="text-sm text-gray-300">Ao vivo no Caiçara Clube de Jaú</p>
-                    </div>
-                </a>
-
-                <!-- Video 2 -->
-                <a href="https://www.youtube.com/shorts/2W55C2K_ibc" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-video reveal block outline-none" style="transition-delay: 100ms;">
-                    <img src="capa2.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x338/0B0B0B/D4AF37?text=Video+2';" alt="War Pigs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
-                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                        <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
-                            <i data-lucide="play" class="text-bg1 w-8 h-8 ml-1"></i>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-                        <h4 class="font-title font-bold text-lg">War Pigs - Black Sabbath</h4>
-                        <p class="text-sm text-gray-300">Ao vivo no Jimi's Bar</p>
-                    </div>
-                </a>
-
-                <!-- Video 3 -->
-                <a href="https://www.youtube.com/shorts/QZCnOxacnCM" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-video reveal block outline-none" style="transition-delay: 200ms;">
-                    <img src="capa3.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x338/0B0B0B/D4AF37?text=Video+3';" alt="Proibida Pra Mim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
-                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                        <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
-                            <i data-lucide="play" class="text-bg1 w-8 h-8 ml-1"></i>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-                        <h4 class="font-title font-bold text-lg">Proibida Pra Mim - Charlie Brown Jr.</h4>
-                        <p class="text-sm text-gray-300">Ao vivo na Adelaide</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="mt-8 text-center md:hidden">
-                 <a href="https://www.youtube.com/@bandauntold" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-gold transition-colors font-bold outline-none">
-                    Ver canal no YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery & Differentials Section -->
-    <section class="py-24 relative overflow-hidden outline-none">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-5 gap-16">
-            
-            <!-- Differentials Timeline -->
-            <div class="lg:col-span-2 reveal">
-                <h2 class="font-title text-3xl md:text-4xl font-bold mb-10">Por que <span class="text-gold">nos escolher?</span></h2>
-                
-                <div class="relative timeline-container pl-12 md:pl-0 md:text-center">
-                    <!-- Item 1 -->
-                    <div class="relative mb-12 md:w-1/2 md:ml-auto md:pl-10 md:text-left text-left">
-                        <div class="absolute left-[-48px] md:left-[-12px] top-1 w-6 h-6 rounded-full bg-bg1 border-4 border-gold z-10"></div>
-                        <h4 class="font-title text-xl font-bold text-gold mb-2">Repertório Personalizado</h4>
-                        <p class="text-textGray text-sm">Alinhamos o setlist previamente com você para garantir que suas músicas favoritas não fiquem de fora.</p>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="relative mb-12 md:w-1/2 md:mr-auto md:pr-10 md:text-right text-left">
-                        <div class="absolute left-[-48px] md:left-auto md:right-[-12px] top-1 w-6 h-6 rounded-full bg-bg1 border-4 border-gold z-10"></div>
-                        <h4 class="font-title text-xl font-bold text-gold mb-2">Equipamentos Pro</h4>
-                        <p class="text-textGray text-sm">Equipamentos de qualidade que não deixarão seu evento na mão.</p>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="relative mb-12 md:w-1/2 md:ml-auto md:pl-10 md:text-left text-left">
-                        <div class="absolute left-[-48px] md:left-[-12px] top-1 w-6 h-6 rounded-full bg-bg1 border-4 border-gold z-10"></div>
-                        <h4 class="font-title text-xl font-bold text-gold mb-2">Pontualidade Britânica</h4>
-                        <p class="text-textGray text-sm">Chegamos com horas de antecedência para montagem e passagem de som, sem estresse para a organização.</p>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="relative md:w-1/2 md:mr-auto md:pr-10 md:text-right text-left">
-                        <div class="absolute left-[-48px] md:left-auto md:right-[-12px] top-1 w-6 h-6 rounded-full bg-bg1 border-4 border-gold z-10"></div>
-                        <h4 class="font-title text-xl font-bold text-gold mb-2">Atendimento Direto</h4>
-                        <p class="text-textGray text-sm">Sem intermediários. Você fala diretamente com a banda pelo WhatsApp para fechar todos os detalhes.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Masonry Gallery (Updated with the new 4 images) -->
-            <div class="lg:col-span-3 reveal" style="transition-delay: 200ms;">
-                <h2 class="font-title text-3xl font-bold mb-8 text-center lg:text-left hidden lg:block text-transparent selection:bg-transparent">Galeria</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="group relative overflow-hidden rounded-xl h-64">
-                        <img src="Foto%202.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500/0B0B0B/D4AF37?text=Foto+2';" alt="Banda Untold Ao Vivo" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-gold/20 transition-colors duration-500"></div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-xl h-64">
-                        <img src="Foto%203.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500/0B0B0B/D4AF37?text=Foto+3';" alt="Galera Animada" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-gold/20 transition-colors duration-500"></div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-xl h-64">
-                        <img src="Foto%204.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500/0B0B0B/D4AF37?text=Foto+4';" alt="Bastidores" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-gold/20 transition-colors duration-500"></div>
-                    </div>
-                    <div class="group relative overflow-hidden rounded-xl h-64">
-                        <img src="Foto%205.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500/0B0B0B/D4AF37?text=Foto+5';" alt="Show" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-gold/20 transition-colors duration-500"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-24 bg-bg2 relative border-t border-b border-white/5 outline-none">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h2 class="font-title text-3xl md:text-5xl font-bold mb-4">O que <span class="text-gold">dizem sobre nós</span></h2>
-            </div>
-
-            <!-- Mobile scrollable flex, Desktop Grid -->
-            <div class="flex overflow-x-auto lg:grid lg:grid-cols-3 gap-6 pb-8 hide-scroll snap-x snap-mandatory">
-                
-                <!-- Depoimento 1 -->
-                <div class="glass p-8 rounded-2xl min-w-[300px] md:min-w-[400px] lg:min-w-0 snap-center reveal flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-gold mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-textGray italic mb-6">"Pessoal da Untold sempre foi excelente aqui no Casarão, muito parceiros e sabem chamar a galera, recomendo a todos."</p>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-lg font-bold text-white">H</div>
-                        <div>
-                            <h5 class="font-title font-bold text-white">Hermes Furlaneto</h5>
-                            <p class="text-xs text-gold">Casarão 682 - Jaú/SP</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Depoimento 2 -->
-                <div class="glass p-8 rounded-2xl min-w-[300px] md:min-w-[400px] lg:min-w-0 snap-center reveal flex flex-col justify-between" style="transition-delay: 100ms;">
-                    <div>
-                        <div class="flex text-gold mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-textGray italic mb-6">"Foi um SHOW do começo ao fim, pessoal sempre animado e sempre sons que me trazem aquele sentimento de nostalgia."</p>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-lg font-bold text-white">E</div>
-                        <div>
-                            <h5 class="font-title font-bold text-white">Eduardo Campanhã</h5>
-                            <p class="text-xs text-gold">Bar da Adelaide - Jaú/SP</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Depoimento 3 -->
-                <div class="glass p-8 rounded-2xl min-w-[300px] md:min-w-[400px] lg:min-w-0 snap-center reveal flex flex-col justify-between" style="transition-delay: 200ms;">
-                    <div>
-                        <div class="flex text-gold mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-textGray italic mb-6">"A Untold já é da casa, sempre que posso chamo, fazem um som que é difícil ver nas bandas mais novas de hoje em dia."</p>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-lg font-bold text-white">G</div>
-                        <div>
-                            <h5 class="font-title font-bold text-white">Gabriel Atalla</h5>
-                            <p class="text-xs text-gold">Jimi's Bar - Jaú/SP</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Agenda & FAQ Section -->
-    <section id="agenda" class="py-24 relative outline-none">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
-            
-            <!-- Agenda -->
-            <div class="reveal">
-                <h2 class="font-title text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-                    <i data-lucide="calendar-days" class="text-gold w-8 h-8"></i>
-                    Próximos <span class="text-gold">Shows</span>
-                </h2>
-                
-                <div class="glass p-8 rounded-2xl text-center border-dashed border-2 border-white/10 outline-none">
-                    <i data-lucide="calendar-clock" class="w-12 h-12 text-white/30 mx-auto mb-4"></i>
-                    <h4 class="font-title text-xl font-bold mb-2">Agenda em atualização</h4>
-                    <p class="text-textGray text-sm">Novas datas serão divulgadas em breve. Siga nosso Instagram para acompanhar.</p>
-                    <a href="https://www.instagram.com/banda.untold/" target="_blank" class="inline-flex items-center gap-2 mt-6 text-gold hover:text-white transition-colors outline-none">
-                        <i data-lucide="instagram" class="w-4 h-4"></i> @banda.untold
-                    </a>
-                </div>
-            </div>
-
-            <!-- FAQ -->
-            <div class="reveal" style="transition-delay: 200ms;">
-                <h2 class="font-title text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-                    <i data-lucide="help-circle" class="text-gold w-8 h-8"></i>
-                    Dúvidas <span class="text-gold">Frequentes</span>
-                </h2>
-                
-                <div class="space-y-4">
-                    <!-- FAQ Item 1 -->
-                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden outline-none">
-                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors outline-none">
-                            Quanto tempo dura o show?
-                            <span class="transition group-open:rotate-180">
-                                <i data-lucide="chevron-down" class="w-5 h-5"></i>
-                            </span>
-                        </summary>
-                        <div class="p-5 pt-0 text-sm text-textGray leading-relaxed border-t border-white/5 mt-2">
-                            Nosso formato padrão é de 2 horas a 2h30 de show direto, ou dividido em dois blocos. Mas somos totalmente flexíveis e podemos adaptar a duração de acordo com a necessidade do seu cronograma.
-                        </div>
-                    </details>
-                    
-                    <!-- FAQ Item 2 -->
-                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden outline-none">
-                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors outline-none">
-                            Vocês levam equipamento de som e luz?
-                            <span class="transition group-open:rotate-180">
-                                <i data-lucide="chevron-down" class="w-5 h-5"></i>
-                            </span>
-                        </summary>
-                        <div class="p-5 pt-0 text-sm text-textGray leading-relaxed border-t border-white/5 mt-2">
-                            Possuímos nossos instrumentos (backline) completo e profissional. Para som de PA e iluminação da pista/palco, oferecemos o pacote completo caso o local não possua estrutura, garantindo qualidade total.
-                        </div>
-                    </details>
-
-                    <!-- FAQ Item 3 -->
-                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden outline-none">
-                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors outline-none">
-                            Atendem outras cidades além de Jaú?
-                            <span class="transition group-open:rotate-180">
-                                <i data-lucide="chevron-down" class="w-5 h-5"></i>
-                            </span>
-                        </summary>
-                        <div class="p-5 pt-0 text-sm text-textGray leading-relaxed border-t border-white/5 mt-2">
-                            Sim! Tocamos em Bauru, Botucatu, Lençóis Paulista, Brotas, Ribeirão Preto e todo o interior de SP. Para viagens mais longas, calculamos apenas o custo de deslocamento/logística.
-                        </div>
-                    </details>
-
-                    <!-- FAQ Item 4 -->
-                    <details class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden outline-none">
-                        <summary class="flex items-center justify-between cursor-pointer p-5 font-title font-semibold text-white group-open:text-gold transition-colors outline-none">
-                            Posso escolher músicas pro repertório?
-                            <span class="transition group-open:rotate-180">
-                                <i data-lucide="chevron-down" class="w-5 h-5"></i>
-                            </span>
-                        </summary>
-                        <div class="p-5 pt-0 text-sm text-textGray leading-relaxed border-t border-white/5 mt-2">
-                            Com certeza! Para eventos fechados (casamentos, corporativos), enviamos nosso setlist completo para você selecionar as preferidas e vetar o que não gosta. Também tiramos músicas especiais sob encomenda.
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section (Cinematic) -->
-    <section class="relative py-32 flex items-center justify-center overflow-hidden outline-none">
-        <div class="absolute inset-0 bg-cta-pattern bg-cover bg-center bg-scroll md:bg-fixed"></div>
-        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto reveal outline-none">
-            <h2 class="font-title text-4xl md:text-6xl font-bold mb-6 glow-text outline-none">PRONTO PARA LEVAR O ROCK <br class="hidden md:block"> PARA O SEU EVENTO?</h2>
-            <p class="text-textGray text-lg md:text-xl mb-10 outline-none">Datas concorridas. Consulte nossa disponibilidade e garanta a energia da Banda Untold na sua festa.</p>
-            <a href="https://wa.me/5514997256404?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento%20da%20Banda%20Untold." target="_blank" class="inline-flex items-center justify-center gap-3 bg-whatsapp hover:bg-green-500 text-white font-bold text-xl py-5 px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.4)] outline-none">
-                <i data-lucide="message-circle" class="w-6 h-6"></i>
-                Chamar no WhatsApp
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-bg1 pt-16 pb-8 border-t border-white/10 text-center md:text-left relative z-20 outline-none">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 mb-12">
-            <div class="md:col-span-1 outline-none">
-                <a href="#" class="text-3xl font-title font-bold tracking-wider text-textWhite mb-4 flex items-center justify-center md:justify-start gap-2 outline-none">
-                    <i data-lucide="mic-2" class="text-gold h-8 w-8"></i>
-                    UNTOLD<span class="text-gold">.</span>
-                </a>
-                <p class="text-textGray text-sm mb-6 outline-none">Transformando eventos em experiências inesquecíveis com o melhor do Rock.</p>
-            </div>
-            
-            <div class="outline-none">
-                <h4 class="font-title font-bold text-white mb-4">Navegação</h4>
-                <ul class="space-y-2 text-sm text-textGray">
-                    <li><a href="#sobre" class="hover:text-gold transition-colors outline-none">A Banda</a></li>
-                    <li><a href="#repertorio" class="hover:text-gold transition-colors outline-none">Repertório</a></li>
-                    <li><a href="#servicos" class="hover:text-gold transition-colors outline-none">Serviços</a></li>
-                    <li><a href="#videos" class="hover:text-gold transition-colors outline-none">Vídeos</a></li>
-                </ul>
-            </div>
-            
-            <div class="outline-none">
-                <h4 class="font-title font-bold text-white mb-4">Contato</h4>
-                <ul class="space-y-2 text-sm text-textGray">
-                    <li class="flex items-center justify-center md:justify-start gap-2 outline-none">
-                        <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i> Jaú-SP e Região
-                    </li>
-                    <li class="flex items-center justify-center md:justify-start gap-2 outline-none">
-                        <i data-lucide="phone" class="w-4 h-4 text-gold"></i> (14) 99725-6404
-                    </li>
-                    <li class="flex items-center justify-center md:justify-start gap-2 outline-none">
-                        <i data-lucide="mail" class="w-4 h-4 text-gold"></i> bandaustories@gmail.com
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="outline-none">
-                <h4 class="font-title font-bold text-white mb-4">Redes Sociais</h4>
-                <div class="flex items-center justify-center md:justify-start gap-4">
-                    <a href="https://www.instagram.com/banda.untold/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-bg1 transition-colors text-white outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                    </a>
-                    <a href="https://www.youtube.com/@bandauntold" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-bg1 transition-colors text-white outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/banda.untold" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-bg1 transition-colors text-white outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center text-xs text-white/30 border-t border-white/5 pt-8 outline-none">
-            <p>&copy; 2026 Banda Untold. Todos os direitos reservados. Jaú-SP.</p>
-        </div>
-    </footer>
-
-    <!-- Fixed Elements -->
-    
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20um%20orçamento." target="_blank" class="fixed bottom-6 right-6 z-50 bg-whatsapp hover:bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] transform hover:scale-110 transition-all animate-bounce outline-none" style="animation-duration: 3s;" aria-label="Fale conosco no WhatsApp">
-        <i data-lucide="message-circle" class="w-7 h-7"></i>
+<!-- =========================================================
+     TOPO FIXO: logo · navegação · DECK DE FITA (player local)
+     ========================================================= -->
+<header class="topbar" id="topbar">
+    <a class="brand" href="#topo" aria-label="UNTOLD — início">
+        <img class="brand__mark" src="assets/img/logo-u-96.png" width="32" height="32" alt="">
+        <span class="brand__name">UNTOLD</span>
     </a>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-24 right-6 z-40 bg-white/10 hover:bg-gold backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 outline-none" aria-label="Voltar ao topo">
-        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    <nav class="topnav" aria-label="Principal">
+        <a href="#banda"><span class="topnav__n">01</span>Banda</a>
+        <a href="#repertorio"><span class="topnav__n">02</span>Repertório</a>
+        <a href="#videos"><span class="topnav__n">04</span>Vídeos</a>
+        <a href="#musica"><span class="topnav__n">06</span>Spotify</a>
+        <a href="#agenda"><span class="topnav__n">08</span>Agenda</a>
+    </nav>
+
+    <!-- DECK DE FITA: toca os MP3 de config/playlist.js -->
+    <div class="deck" id="deck" data-state="empty" role="region" aria-label="Player de música da UNTOLD">
+        <div class="deck__body">
+            <span class="deck__brand" aria-hidden="true">UNTOLD<br>STEREO</span>
+            <span class="deck__led" aria-hidden="true"></span>
+            <div class="deck__cassette" aria-hidden="true">
+                <span class="reel reel--l"></span>
+                <span class="deck__tape"></span>
+                <span class="reel reel--r"></span>
+            </div>
+            <button class="deck__lcd" type="button" data-act="panel" aria-controls="deck-panel" aria-expanded="false" aria-label="Abrir lista de faixas">
+                <span class="lcd__line">
+                    <span class="lcd__marquee"><span class="lcd__text" data-bind="title">SEM FITA</span></span>
+                </span>
+                <span class="lcd__line lcd__line--sub">
+                    <span data-bind="index">--/--</span>
+                    <span class="lcd__vu" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                    <span data-bind="time">--:--</span>
+                </span>
+                <span class="lcd__progress" aria-hidden="true"><span class="lcd__fill" data-bind="fill"></span></span>
+            </button>
+            <div class="deck__keys">
+                <button class="key key--sm" type="button" data-act="prev" aria-label="Faixa anterior"><svg><use href="#i-prev"/></svg></button>
+                <button class="key key--play" type="button" data-act="toggle" aria-label="Tocar"><svg class="ic-play"><use href="#i-play"/></svg><svg class="ic-pause"><use href="#i-pause"/></svg></button>
+                <button class="key key--sm" type="button" data-act="next" aria-label="Próxima faixa"><svg><use href="#i-next"/></svg></button>
+            </div>
+            <label class="deck__vol">
+                <svg aria-hidden="true"><use href="#i-vol"/></svg>
+                <span class="sr-only">Volume</span>
+                <input type="range" min="0" max="1" step="0.01" value="0.8" data-bind="volume">
+            </label>
+            <button class="key key--list" type="button" data-act="panel" aria-controls="deck-panel" aria-expanded="false" aria-label="Lista de faixas"><svg><use href="#i-list"/></svg></button>
+        </div>
+
+        <div class="deck__panel" id="deck-panel" hidden>
+            <div class="jcard">
+                <div class="jcard__head">
+                    <span class="jcard__label" data-bind="label">UNTOLD · LADO A</span>
+                    <span class="jcard__type">Fita local · faixas do site</span>
+                </div>
+
+                <!-- controles completos (visíveis no celular) -->
+                <div class="jcard__transport">
+                    <div class="jcard__now">
+                        <span class="jcard__now-title">Sem fita</span>
+                        <span class="jcard__now-info" data-bind="info"></span>
+                    </div>
+                    <div class="jcard__seek">
+                        <span data-bind="current">0:00</span>
+                        <input type="range" min="0" max="1000" step="1" value="0" data-bind="seek" aria-label="Posição da faixa">
+                        <span data-bind="duration">--:--</span>
+                    </div>
+                    <div class="jcard__keys">
+                        <button class="key" type="button" data-act="prev" aria-label="Faixa anterior"><svg><use href="#i-prev"/></svg></button>
+                        <button class="key key--play" type="button" data-act="toggle" aria-label="Tocar"><svg class="ic-play"><use href="#i-play"/></svg><svg class="ic-pause"><use href="#i-pause"/></svg></button>
+                        <button class="key" type="button" data-act="next" aria-label="Próxima faixa"><svg><use href="#i-next"/></svg></button>
+                        <label class="jcard__vol">
+                            <svg aria-hidden="true"><use href="#i-vol"/></svg>
+                            <span class="sr-only">Volume</span>
+                            <input type="range" min="0" max="1" step="0.01" value="0.8" data-bind="volume">
+                        </label>
+                    </div>
+                </div>
+
+                <ol class="jcard__list" data-bind="list"></ol>
+                <p class="jcard__empty" data-bind="empty">Ainda não há faixas nesta fita.</p>
+                <a class="jcard__spotify" href="#musica" data-act="close-panel">
+                    <svg aria-hidden="true"><use href="#i-spotify"/></svg>
+                    Ouça também a playlist oficial no Spotify
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a class="btn btn--stamp topbar__cta" href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener">Orçamento</a>
+
+    <button class="menu-btn" id="menu-btn" type="button" aria-controls="menu" aria-expanded="false">
+        <span class="menu-btn__label">Menu</span>
+        <span class="menu-btn__bars" aria-hidden="true"><i></i><i></i></span>
     </button>
+</header>
 
-    <!-- JavaScript Actions -->
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+<!-- MENU EM TELA CHEIA (sumário de revista) -->
+<div class="menu" id="menu" hidden>
+    <div class="menu__inner">
+        <p class="menu__kicker mono">Sumário — UNTOLD</p>
+        <nav class="menu__nav" aria-label="Menu">
+            <a href="#banda" data-img="assets/img/bw/foto-1.webp"><span class="menu__n">01</span><span class="menu__t">A Banda</span></a>
+            <a href="#repertorio" data-img="assets/img/bw/foto-2.webp"><span class="menu__n">02</span><span class="menu__t">Repertório</span></a>
+            <a href="#servicos" data-img="assets/img/bw/foto-3.webp"><span class="menu__n">03</span><span class="menu__t">Onde tocamos</span></a>
+            <a href="#videos" data-img="assets/img/bw/capa-1.webp"><span class="menu__n">04</span><span class="menu__t">Vídeos</span></a>
+            <a href="#galeria" data-img="assets/img/bw/foto-4.webp"><span class="menu__n">05</span><span class="menu__t">Fotos</span></a>
+            <a href="#musica" data-img="assets/img/bw/foto-5.webp"><span class="menu__n">06</span><span class="menu__t">Spotify</span></a>
+            <a href="#depoimentos" data-img="assets/img/bw/capa-3.webp"><span class="menu__n">07</span><span class="menu__t">Depoimentos</span></a>
+            <a href="#agenda" data-img="assets/img/bw/capa-2.webp"><span class="menu__n">08</span><span class="menu__t">Agenda &amp; dúvidas</span></a>
+            <a href="#contato" data-img="assets/img/bw/head1-800.webp"><span class="menu__n">09</span><span class="menu__t">Contato</span></a>
+        </nav>
+        <div class="menu__preview" aria-hidden="true"><img src="assets/img/bw/foto-1.webp" alt="" width="500" height="375"></div>
+        <div class="menu__foot">
+            <a class="btn btn--red" href="https://wa.me/5514997256404" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Solicitar orçamento</a>
+            <div class="social">
+                <a href="https://www.instagram.com/banda.untold/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+                <a href="https://www.youtube.com/@bandauntold" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+                <a href="https://www.facebook.com/banda.untold" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+            </div>
+        </div>
+    </div>
+</div>
 
-        // DOM Elements
-        const navbar = document.getElementById('navbar');
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        const backToTopBtn = document.getElementById('back-to-top');
-        
-        // --- Navbar Scroll Effect & Back to Top Toggle ---
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                // Navbar
-                navbar.classList.remove('bg-transparent', 'py-4');
-                navbar.classList.add('bg-bg1/90', 'backdrop-blur-md', 'py-2', 'shadow-lg', 'border-b', 'border-white/5');
-            } else {
-                // Navbar
-                navbar.classList.add('bg-transparent', 'py-4');
-                navbar.classList.remove('bg-bg1/90', 'backdrop-blur-md', 'py-2', 'shadow-lg', 'border-b', 'border-white/5');
-            }
+<main id="conteudo">
 
-            // Back to Top Button visibility
-            if (window.scrollY > 500) {
-                backToTopBtn.classList.remove('translate-y-20', 'opacity-0');
-                backToTopBtn.classList.add('translate-y-0', 'opacity-100');
-            } else {
-                backToTopBtn.classList.add('translate-y-20', 'opacity-0');
-                backToTopBtn.classList.remove('translate-y-0', 'opacity-100');
-            }
-        });
+<!-- =========================================================
+     00 · HERO
+     ========================================================= -->
+<section class="hero" id="topo" aria-label="Apresentação">
+    <div class="hero__meta mono" data-intro>
+        <span>Banda de Rock</span>
+        <span class="hero__meta-mid">Ao vivo · Rock Nacional &amp; Internacional</span>
+        <span>Jaú / SP</span>
+    </div>
 
-        // --- Mobile Menu Toggle ---
-        let isMenuOpen = false;
-        
-        function toggleMenu() {
-            isMenuOpen = !isMenuOpen;
-            if (isMenuOpen) {
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-                // Change icon to X (simulated via lucide dynamic replace)
-                mobileMenuBtn.innerHTML = '<i data-lucide="x" class="w-8 h-8"></i>';
-                lucide.createIcons();
-            } else {
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
-                document.body.style.overflow = 'auto'; // Restore scrolling
-                // Change icon back to Menu
-                mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-8 h-8"></i>';
-                lucide.createIcons();
-            }
-        }
+    <div class="hero__grid">
+        <div class="hero__copy">
+            <p class="hero__kicker mono" data-intro>Bares · Casamentos · Corporativo · Festivais</p>
+            <p class="hero__tag" aria-hidden="true" data-intro>O rock que transforma qualquer evento em uma <em>experiência inesquecível.</em></p>
+            <p class="hero__lede" data-intro>
+                Dos clássicos que marcaram gerações aos grandes sucessos. Levamos um show cheio de energia para bares, casamentos, eventos corporativos e festivais.
+            </p>
+            <div class="hero__ctas" data-intro>
+                <a class="btn btn--red" href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener">
+                    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Solicitar orçamento
+                </a>
+                <a class="btn btn--ghost" href="#repertorio">Conheça o repertório<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+        </div>
 
-        mobileMenuBtn.addEventListener('click', toggleMenu);
+        <figure class="hero__print" data-parallax="0.08">
+            <div class="print">
+                <span class="print__edge print__edge--top mono" aria-hidden="true">UNTOLD 400 TX &nbsp;▸ 01 &nbsp;&nbsp;&nbsp;&nbsp; ▸ 01A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JAÚ·SP</span>
+                <div class="print__img">
+                    <picture>
+                        <source type="image/webp" srcset="assets/img/bw/head1-800.webp 800w, assets/img/bw/head1-1200.webp 1200w, assets/img/bw/head1.webp 1920w" sizes="(max-width: 760px) 100vw, 66vw">
+                        <img src="head1.png" alt="Banda Untold tocando ao vivo no palco do Casarão 682, em Jaú-SP" width="1920" height="1280" fetchpriority="high" decoding="async">
+                    </picture>
+                </div>
+                <span class="print__edge print__edge--bot mono" aria-hidden="true">◂ 02 &nbsp;&nbsp;&nbsp;&nbsp; UNTOLD 400 TX &nbsp;&nbsp;&nbsp;&nbsp; ◂ 02A</span>
+            </div>
+            <figcaption class="caption mono">Fig. 01 — Ao vivo no Casarão 682, Jaú/SP</figcaption>
+            <span class="tape tape--tl" aria-hidden="true"></span>
+            <span class="tape tape--br" aria-hidden="true"></span>
+        </figure>
 
-        // Close mobile menu when a link is clicked
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', toggleMenu);
-        });
+        <div class="stamp hero__stamp" aria-hidden="true" data-intro>
+            <svg viewBox="0 0 200 200">
+                <defs><path id="stamp-circle" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+                <text><textPath href="#stamp-circle" textLength="500">+100 SHOWS REALIZADOS ✶ JAÚ E INTERIOR SP ✶</textPath></text>
+            </svg>
+            <img src="assets/img/logo-u-96.png" alt="" width="56" height="56">
+        </div>
+    </div>
 
-        // --- Back to Top Action ---
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+    <h1 class="hero__title">
+        <span class="sr-only">Banda Untold — o rock que transforma qualquer evento em uma experiência inesquecível.</span>
+        <span class="hero__word" aria-hidden="true"><span class="ch">U</span><span class="ch">N</span><span class="ch">T</span><span class="ch">O</span><span class="ch">L</span><span class="ch">D</span></span>
+    </h1>
 
-        // --- Scroll Reveal Animation (Intersection Observer) ---
-        const revealOptions = {
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px"
-        };
+    <div class="hero__foot" data-intro>
+        <a class="hero__scroll mono" href="#banda"><i aria-hidden="true"></i><span>Role</span></a>
+        <p class="hero__bands mono"><span>Com clássicos de</span> Pearl Jam • Charlie Brown Jr. • Led Zeppelin • Queen • Guns N' Roses • AC/DC e mais.</p>
+    </div>
+</section>
 
-        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('active');
-                // Optional: Stop observing once revealed
-                observer.unobserve(entry.target);
-            });
-        }, revealOptions);
+<!-- Fita vermelha com os sons do repertório -->
+<div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+        <span>Pearl Jam</span><b>✶</b><span>Charlie Brown Jr.</span><b>✶</b><span>Led Zeppelin</span><b>✶</b><span>Queen</span><b>✶</b><span>Guns N' Roses</span><b>✶</b><span>AC/DC</span><b>✶</b><span>Alice in Chains</span><b>✶</b><span>Legião Urbana</span><b>✶</b><span>Foo Fighters</span><b>✶</b><span>Raimundos</span><b>✶</b>
+        <span>Pearl Jam</span><b>✶</b><span>Charlie Brown Jr.</span><b>✶</b><span>Led Zeppelin</span><b>✶</b><span>Queen</span><b>✶</b><span>Guns N' Roses</span><b>✶</b><span>AC/DC</span><b>✶</b><span>Alice in Chains</span><b>✶</b><span>Legião Urbana</span><b>✶</b><span>Foo Fighters</span><b>✶</b><span>Raimundos</span><b>✶</b>
+    </div>
+</div>
 
-        document.querySelectorAll('.reveal').forEach(element => {
-            revealOnScroll.observe(element);
-        });
+<!-- =========================================================
+     01 · A BANDA
+     ========================================================= -->
+<section class="section band" id="banda">
+    <header class="folio" data-reveal>
+        <span class="folio__n">01</span><span class="folio__t">A Banda</span><span class="folio__rule"></span><span class="folio__x">Jaú / SP</span>
+    </header>
 
-        // --- Smooth Scrolling for Anchor Links ---
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href');
-                if(targetId === "#") return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    // Account for fixed header height
-                    const headerOffset = 80;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-                }
-            });
-        });
-    </script>
+    <h2 class="headline band__headline">
+        <span class="headline__big" data-reveal="mask">A energia do palco,</span>
+        <span class="headline__serif" data-reveal="mask" style="--d:.12s">onde você estiver.</span>
+    </h2>
+
+    <div class="band__grid">
+        <div class="band__photos">
+            <figure class="band__main ph" data-reveal="photo">
+                <div class="ph__frame">
+                    <img src="assets/img/bw/foto-1.webp" data-color="assets/img/color/foto-1.webp" alt="Banda Untold no palco do Casarão 682 sob luz verde" width="800" height="533" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="caption mono">Fig. 02 — Casarão 682</figcaption>
+            </figure>
+            <figure class="band__candid ph" data-reveal="photo" style="--d:.2s" data-parallax="-0.06">
+                <div class="ph__frame ph__frame--print">
+                    <img src="assets/img/bw/foto-4.webp" data-color="assets/img/color/foto-4.webp" alt="Integrantes da Untold sentados na escada, nos bastidores" width="500" height="375" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="caption mono">Bastidores</figcaption>
+                <span class="tape tape--tc" aria-hidden="true"></span>
+            </figure>
+        </div>
+
+        <div class="band__text">
+            <p class="dropcap" data-reveal>A Banda Untold nasceu da paixão pelo rock verdadeiro. Nosso objetivo não é apenas tocar músicas, mas criar uma atmosfera onde o público canta junto, pula e revive os melhores momentos de suas vidas através de clássicos imortais.</p>
+            <p data-reveal style="--d:.08s">Com músicos experientes, equipamentos de ponta e um visual impecável, entregamos um espetáculo completo que se adapta perfeitamente ao seu bar, festival, casamento ou evento corporativo em Jaú e região.</p>
+            <ul class="checks mono" data-reveal style="--d:.12s">
+                <li>Pontualidade e profissionalismo</li>
+                <li>Som e iluminação próprios (opcional)</li>
+                <li>Repertório ajustável ao seu público</li>
+            </ul>
+            <a class="link-arrow" href="https://wa.me/5514997256404" target="_blank" rel="noopener" data-reveal style="--d:.16s">
+                Quero um show para meu evento <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Números (antigo banner de credibilidade) -->
+    <dl class="stats">
+        <div class="stat" data-reveal>
+            <dt class="stat__label mono">Shows realizados</dt>
+            <dd class="stat__value">+<span data-count="100">100</span></dd>
+        </div>
+        <div class="stat" data-reveal style="--d:.08s">
+            <dt class="stat__label mono">Músicas no repertório</dt>
+            <dd class="stat__value"><span data-count="100">100</span>+</dd>
+        </div>
+        <div class="stat" data-reveal style="--d:.16s">
+            <dt class="stat__label mono">Região</dt>
+            <dd class="stat__value stat__value--text">Jaú <em>&amp; interior SP</em></dd>
+        </div>
+        <div class="stat" data-reveal style="--d:.24s">
+            <dt class="stat__label mono">Equipamento premium</dt>
+            <dd class="stat__value stat__value--icon"><svg aria-hidden="true"><use href="#i-speaker"/></svg><span class="sr-only">Equipamento premium</span></dd>
+        </div>
+    </dl>
+
+    <!-- Por que nos escolher (encarte) -->
+    <div class="liner">
+        <h3 class="liner__title" data-reveal>Por que <em>nos escolher?</em></h3>
+        <ol class="liner__list">
+            <li data-reveal><span class="liner__n mono">A1</span><h4>Repertório personalizado</h4><p>Alinhamos o setlist previamente com você para garantir que suas músicas favoritas não fiquem de fora.</p></li>
+            <li data-reveal style="--d:.08s"><span class="liner__n mono">A2</span><h4>Equipamentos pro</h4><p>Equipamentos de qualidade que não deixarão seu evento na mão.</p></li>
+            <li data-reveal style="--d:.16s"><span class="liner__n mono">A3</span><h4>Pontualidade britânica</h4><p>Chegamos com horas de antecedência para montagem e passagem de som, sem estresse para a organização.</p></li>
+            <li data-reveal style="--d:.24s"><span class="liner__n mono">A4</span><h4>Atendimento direto</h4><p>Sem intermediários. Você fala diretamente com a banda pelo WhatsApp para fechar todos os detalhes.</p></li>
+        </ol>
+    </div>
+</section>
+
+<!-- =========================================================
+     02 · REPERTÓRIO (setlist colado no palco)
+     ========================================================= -->
+<section class="section setlist-sec paper" id="repertorio">
+    <div class="tear tear--top" aria-hidden="true"></div>
+    <header class="folio folio--ink" data-reveal>
+        <span class="folio__n">02</span><span class="folio__t">Repertório</span><span class="folio__rule"></span><span class="folio__x">Lado A / Lado B</span>
+    </header>
+
+    <div class="setlist-sec__head">
+        <h2 class="headline headline--ink">
+            <span class="headline__big" data-reveal="mask">Setlist</span>
+            <span class="headline__serif headline__serif--red" data-reveal="mask" style="--d:.12s">nosso repertório</span>
+        </h2>
+        <p class="setlist-sec__intro" data-reveal>Os maiores hinos do Rock Nacional e Internacional meticulosamente ensaiados para soar como nas arenas.</p>
+    </div>
+
+    <div class="setlist" data-reveal="sheet">
+        <span class="tape tape--tl" aria-hidden="true"></span>
+        <span class="tape tape--tr" aria-hidden="true"></span>
+        <div class="setlist__side">
+            <h3 class="setlist__side-title mono"><span>Lado A</span> Rock Internacional</h3>
+            <ol class="setlist__list">
+                <li><span class="setlist__n">A1</span><span class="setlist__name">Pearl Jam</span></li>
+                <li><span class="setlist__n">A2</span><span class="setlist__name">Alice in Chains</span></li>
+                <li><span class="setlist__n">A3</span><span class="setlist__name">Led Zeppelin</span></li>
+                <li><span class="setlist__n">A4</span><span class="setlist__name">Foo Fighters</span></li>
+                <li><span class="setlist__n">A5</span><span class="setlist__name">Queen</span></li>
+                <li><span class="setlist__n">A6</span><span class="setlist__name">AC/DC</span></li>
+                <li><span class="setlist__n">A7</span><span class="setlist__name">Bon Jovi</span></li>
+                <li><span class="setlist__n">A8</span><span class="setlist__name">Guns N' Roses</span></li>
+                <li><span class="setlist__n">A9</span><span class="setlist__name">Metallica</span></li>
+                <li><span class="setlist__n">A10</span><span class="setlist__name">Nirvana</span></li>
+                <li><span class="setlist__n">A11</span><span class="setlist__name">Audioslave</span></li>
+                <li><span class="setlist__n">A12</span><span class="setlist__name">Creed</span></li>
+                <li><span class="setlist__n">A13</span><span class="setlist__name">The Beatles</span></li>
+                <li><span class="setlist__n">A14</span><span class="setlist__name">The Rolling Stones</span></li>
+            </ol>
+        </div>
+        <div class="setlist__side">
+            <h3 class="setlist__side-title mono"><span>Lado B</span> Rock Nacional</h3>
+            <ol class="setlist__list">
+                <li><span class="setlist__n">B1</span><span class="setlist__name">Charlie Brown Jr.</span></li>
+                <li><span class="setlist__n">B2</span><span class="setlist__name">Legião Urbana</span></li>
+                <li><span class="setlist__n">B3</span><span class="setlist__name">Capital Inicial</span></li>
+                <li><span class="setlist__n">B4</span><span class="setlist__name">Barão Vermelho</span></li>
+                <li><span class="setlist__n">B5</span><span class="setlist__name">Titãs</span></li>
+                <li><span class="setlist__n">B6</span><span class="setlist__name">CPM22</span></li>
+                <li><span class="setlist__n">B7</span><span class="setlist__name">Raimundos</span></li>
+                <li><span class="setlist__n">B8</span><span class="setlist__name">Paralamas do Sucesso</span></li>
+                <li><span class="setlist__n">B9</span><span class="setlist__name">Skank</span></li>
+                <li><span class="setlist__n">B10</span><span class="setlist__name">Frejat</span></li>
+            </ol>
+            <div class="setlist__note">
+                <p class="setlist__scrawl">Tem alguma música especial? Nós incluímos para o seu evento!</p>
+                <a class="btn btn--ink" href="https://wa.me/5514997256404" target="_blank" rel="noopener">Solicitar setlist completo<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+        </div>
+    </div>
+    <div class="tear tear--bottom" aria-hidden="true"></div>
+</section>
+
+<!-- =========================================================
+     03 · ONDE TOCAMOS
+     ========================================================= -->
+<section class="section venues" id="servicos">
+    <header class="folio" data-reveal>
+        <span class="folio__n">03</span><span class="folio__t">Onde tocamos</span><span class="folio__rule"></span><span class="folio__x">Bares → Festivais</span>
+    </header>
+    <div class="venues__head">
+        <h2 class="headline">
+            <span class="headline__big" data-reveal="mask">Onde</span>
+            <span class="headline__serif" data-reveal="mask" style="--d:.12s">tocamos?</span>
+        </h2>
+        <p class="venues__intro" data-reveal>Adaptamos nossa estrutura e repertório para garantir o sucesso absoluto de qualquer formato de evento.</p>
+    </div>
+
+    <ul class="venues__list">
+        <li class="venue" data-reveal data-img="assets/img/bw/capa-2.webp">
+            <span class="venue__n mono">01</span><h3 class="venue__t">Bares e Pubs</h3>
+            <p class="venue__d">Show de longa duração focado em manter a galera consumindo, cantando e garantindo a casa cheia.</p>
+        </li>
+        <li class="venue" data-reveal data-img="assets/img/bw/foto-4.webp">
+            <span class="venue__n mono">02</span><h3 class="venue__t">Casamentos</h3>
+            <p class="venue__d">Fugimos do clichê. Uma festa de casamento épica com uma banda de rock de verdade para convidados inesquecíveis.</p>
+        </li>
+        <li class="venue" data-reveal data-img="assets/img/bw/foto-2.webp">
+            <span class="venue__n mono">03</span><h3 class="venue__t">Corporativo</h3>
+            <p class="venue__d">Confraternizações de empresas ganham vida e energia com um show profissional que quebra o gelo.</p>
+        </li>
+        <li class="venue" data-reveal data-img="assets/img/bw/foto-3.webp">
+            <span class="venue__n mono">04</span><h3 class="venue__t">Festivais</h3>
+            <p class="venue__d">Presença de palco marcante e peso sonoro para palcos de grande porte e festivais abertos.</p>
+        </li>
+        <li class="venue" data-reveal data-img="assets/img/bw/foto-5.webp">
+            <span class="venue__n mono">05</span><h3 class="venue__t">Motoclubes</h3>
+            <p class="venue__d">O autêntico espírito rock and roll em encontros de motociclistas, com repertório pesado e direto.</p>
+        </li>
+        <li class="venue venue--cta" data-reveal data-img="assets/img/bw/capa-3.webp">
+            <span class="venue__n mono">06</span><h3 class="venue__t">Seu evento</h3>
+            <p class="venue__d">Seja uma festa particular, aniversário ou evento público, nós fazemos acontecer.
+                <a class="link-arrow link-arrow--red" href="https://wa.me/5514997256404" target="_blank" rel="noopener">Falar com a banda <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </p>
+        </li>
+    </ul>
+    <div class="venues__float" aria-hidden="true"><img src="assets/img/bw/capa-2.webp" alt="" width="600" height="397"></div>
+</section>
+
+<!-- =========================================================
+     04 · VÍDEOS (3 mais recentes do canal)
+     ========================================================= -->
+<section class="section live" id="videos">
+    <header class="folio" data-reveal>
+        <span class="folio__n">04</span><span class="folio__t">Ao vivo</span><span class="folio__rule"></span><span class="folio__x"><span class="rec-dot"></span> REC</span>
+    </header>
+    <div class="live__head">
+        <h2 class="headline">
+            <span class="headline__big" data-reveal="mask">Assista e</span>
+            <span class="headline__serif" data-reveal="mask" style="--d:.12s">sinta a vibe.</span>
+        </h2>
+        <div class="live__aside" data-reveal>
+            <p>Nada melhor do que ver a banda em ação para entender a energia que entregamos.</p>
+            <a class="link-arrow" href="https://www.youtube.com/@bandauntold" target="_blank" rel="noopener" data-bind="yt-channel">Ver canal no YouTube <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+    </div>
+
+    <!-- Preenchido por assets/js/media.js com os vídeos mais recentes.
+         Conteúdo abaixo é o fallback sem JavaScript. -->
+    <div class="tapes" id="video-list">
+        <a class="tape-card" href="https://www.youtube.com/shorts/kqoFHmFWBcc" target="_blank" rel="noopener">
+            <span class="tape-card__title">Mulher de Fases — Raimundos</span>
+        </a>
+        <a class="tape-card" href="https://www.youtube.com/shorts/2W55C2K_ibc" target="_blank" rel="noopener">
+            <span class="tape-card__title">War Pigs — Black Sabbath</span>
+        </a>
+        <a class="tape-card" href="https://www.youtube.com/shorts/QZCnOxacnCM" target="_blank" rel="noopener">
+            <span class="tape-card__title">Proibida Pra Mim — Charlie Brown Jr.</span>
+        </a>
+    </div>
+</section>
+
+<!-- =========================================================
+     05 · FOTOS (folha de contato 35mm)
+     ========================================================= -->
+<section class="section sheet" id="galeria">
+    <header class="folio" data-reveal>
+        <span class="folio__n">05</span><span class="folio__t">Fotos</span><span class="folio__rule"></span><span class="folio__x">Rolo 01 · 9 poses</span>
+    </header>
+    <h2 class="headline sheet__headline">
+        <span class="headline__big" data-reveal="mask">Folha de</span>
+        <span class="headline__serif" data-reveal="mask" style="--d:.12s">contato.</span>
+    </h2>
+    <p class="sheet__hint mono" data-reveal>Toque numa pose para ampliar — em cores.</p>
+
+    <div class="contact">
+        <div class="strip" data-reveal="strip">
+            <span class="strip__code mono" aria-hidden="true">UNTOLD 400 TX &nbsp; 5063</span>
+            <div class="strip__frames">
+                <button class="frame" type="button" data-full="assets/img/color/head1.webp" data-caption="Ao vivo no Casarão 682 — Jaú/SP"><span class="frame__no mono">1</span><img src="assets/img/bw/head1-800.webp" alt="Banda Untold no palco do Casarão 682" width="800" height="533" loading="lazy" decoding="async"></button>
+                <button class="frame" type="button" data-full="assets/img/color/foto-1.webp" data-caption="Casarão 682 — luz verde"><span class="frame__no mono">2</span><img src="assets/img/bw/foto-1.webp" alt="Untold sob luz verde no Casarão 682" width="800" height="533" loading="lazy" decoding="async"></button>
+                <button class="frame" type="button" data-full="assets/img/color/foto-2.webp" data-caption="Linha de frente"><span class="frame__no mono">3</span><img src="assets/img/bw/foto-2.webp" alt="Baixo e guitarras da Untold em close no palco" width="500" height="375" loading="lazy" decoding="async"></button>
+            </div>
+        </div>
+        <div class="strip strip--b" data-reveal="strip">
+            <span class="strip__code mono" aria-hidden="true">UNTOLD 400 TX &nbsp; 5063</span>
+            <div class="strip__frames">
+                <button class="frame" type="button" data-full="assets/img/color/foto-3.webp" data-caption="A vista do palco"><span class="frame__no mono">4</span><img src="assets/img/bw/foto-3.webp" alt="Vista do palco para o público lotado" width="500" height="375" loading="lazy" decoding="async"></button>
+                <button class="frame frame--pick" type="button" data-full="assets/img/color/foto-4.webp" data-caption="Bastidores"><span class="frame__no mono">5</span><img src="assets/img/bw/foto-4.webp" alt="Integrantes da Untold fazendo chifrinhos na escada" width="500" height="375" loading="lazy" decoding="async">
+                    <svg class="grease" viewBox="0 0 200 140" aria-hidden="true"><path d="M30 78C22 40 70 14 112 16c46 2 78 26 70 62-7 33-58 52-104 46C40 119 18 96 34 70c12-20 40-30 70-34" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+                </button>
+                <button class="frame" type="button" data-full="assets/img/color/foto-5.webp" data-caption="Guitarras sob luz verde"><span class="frame__no mono">6</span><img src="assets/img/bw/foto-5.webp" alt="Guitarristas da Untold sob luz verde" width="500" height="375" loading="lazy" decoding="async"></button>
+            </div>
+        </div>
+        <div class="strip strip--c" data-reveal="strip">
+            <span class="strip__code mono" aria-hidden="true">UNTOLD 400 TX &nbsp; 5063</span>
+            <div class="strip__frames">
+                <button class="frame" type="button" data-full="assets/img/color/capa-1.webp" data-caption="Mulher de Fases — Caiçara Clube de Jaú"><span class="frame__no mono">7</span><img src="assets/img/bw/capa-1.webp" alt="Untold ao vivo com fumaça no palco do Caiçara Clube" width="600" height="397" loading="lazy" decoding="async"></button>
+                <button class="frame" type="button" data-full="assets/img/color/capa-2.webp" data-caption="Jimi's Bar"><span class="frame__no mono">8</span><img src="assets/img/bw/capa-2.webp" alt="Untold tocando na calçada do Jimi's Bar" width="600" height="397" loading="lazy" decoding="async"></button>
+                <button class="frame" type="button" data-full="assets/img/color/capa-3.webp" data-caption="Com a galera na Adelaide"><span class="frame__no mono">9</span><img src="assets/img/bw/capa-3.webp" alt="Integrantes da Untold posando com o público" width="600" height="397" loading="lazy" decoding="async"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     06 · SPOTIFY (playlist oficial — independente do deck do topo)
+     ========================================================= -->
+<section class="section listen" id="musica">
+    <div class="tear tear--top tear--wine" aria-hidden="true"></div>
+    <header class="folio" data-reveal>
+        <span class="folio__n">06</span><span class="folio__t">Música</span><span class="folio__rule"></span><span class="folio__x">Spotify</span>
+    </header>
+
+    <div class="listen__grid">
+        <div class="jewel" data-reveal="photo">
+            <div class="jewel__disc" aria-hidden="true"><span></span></div>
+            <div class="jewel__case">
+                <div class="jewel__cover" data-bind="sp-cover">
+                    <img class="jewel__photo" src="assets/img/bw/foto-5.webp" alt="" width="500" height="375" loading="lazy">
+                    <span class="jewel__word">UNTOLD</span>
+                    <span class="jewel__sub">playlist oficial</span>
+                    <span class="jewel__badge mono">Lado S</span>
+                </div>
+                <span class="jewel__hinge" aria-hidden="true"></span>
+            </div>
+        </div>
+
+        <div class="listen__body">
+            <p class="listen__kicker mono" data-reveal><svg aria-hidden="true"><use href="#i-spotify"/></svg> Playlist oficial no Spotify</p>
+            <h2 class="headline">
+                <span class="headline__big" data-reveal="mask">A trilha</span>
+                <span class="headline__serif" data-reveal="mask" style="--d:.12s">da UNTOLD.</span>
+            </h2>
+            <div class="listen__meta" data-reveal>
+                <h3 class="listen__name" data-bind="sp-name">UNTOLD — Playlist Oficial</h3>
+                <p class="listen__desc" data-bind="sp-desc">Os sons que tocam no nosso palco.</p>
+            </div>
+
+            <div class="listen__embed" data-reveal id="spotify-embed">
+                <!-- O iframe do Spotify é inserido aqui (config/spotify.js) -->
+                <div class="listen__soon">
+                    <span class="listen__soon-stamp">Em breve</span>
+                    <p>A playlist oficial da UNTOLD chega aqui em breve. Enquanto isso, siga a banda no Instagram.</p>
+                    <a class="link-arrow" href="https://www.instagram.com/banda.untold/" target="_blank" rel="noopener">@banda.untold <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </div>
+            </div>
+
+            <p class="listen__note mono" data-reveal>
+                <span class="listen__note-tag">Duas formas de ouvir</span>
+                O <a href="#topo" data-act="open-deck">deck de fita no topo</a> toca as faixas hospedadas aqui no site. Este player é o do Spotify — toca a playlist oficial direto do app (entre na sua conta para ouvir as faixas completas).
+            </p>
+        </div>
+    </div>
+    <div class="tear tear--bottom tear--wine" aria-hidden="true"></div>
+</section>
+
+<!-- =========================================================
+     07 · DEPOIMENTOS (recortes de imprensa)
+     ========================================================= -->
+<section class="section quotes paper" id="depoimentos">
+    <div class="tear tear--top" aria-hidden="true"></div>
+    <header class="folio folio--ink" data-reveal>
+        <span class="folio__n">07</span><span class="folio__t">Depoimentos</span><span class="folio__rule"></span><span class="folio__x">★★★★★</span>
+    </header>
+    <h2 class="headline headline--ink">
+        <span class="headline__big" data-reveal="mask">O que dizem</span>
+        <span class="headline__serif headline__serif--red" data-reveal="mask" style="--d:.12s">sobre nós.</span>
+    </h2>
+
+    <div class="quotes__grid">
+        <figure class="quote quote--1" data-reveal>
+            <span class="quote__stars" aria-label="5 de 5 estrelas">★★★★★</span>
+            <blockquote>“Pessoal da Untold sempre foi excelente aqui no Casarão, muito parceiros e sabem chamar a galera, recomendo a todos.”</blockquote>
+            <figcaption><strong>Hermes Furlaneto</strong><span class="mono">Casarão 682 — Jaú/SP</span></figcaption>
+        </figure>
+        <figure class="quote quote--2" data-reveal style="--d:.1s">
+            <span class="quote__stars" aria-label="5 de 5 estrelas">★★★★★</span>
+            <blockquote>“Foi um SHOW do começo ao fim, pessoal sempre animado e sempre sons que me trazem aquele sentimento de nostalgia.”</blockquote>
+            <figcaption><strong>Eduardo Campanhã</strong><span class="mono">Bar da Adelaide — Jaú/SP</span></figcaption>
+        </figure>
+        <figure class="quote quote--3" data-reveal style="--d:.2s">
+            <span class="quote__stars" aria-label="5 de 5 estrelas">★★★★★</span>
+            <blockquote>“A Untold já é da casa, sempre que posso chamo, fazem um som que é difícil ver nas bandas mais novas de hoje em dia.”</blockquote>
+            <figcaption><strong>Gabriel Atalla</strong><span class="mono">Jimi's Bar — Jaú/SP</span></figcaption>
+        </figure>
+    </div>
+    <div class="tear tear--bottom" aria-hidden="true"></div>
+</section>
+
+<!-- =========================================================
+     08 · AGENDA + DÚVIDAS
+     ========================================================= -->
+<section class="section info" id="agenda">
+    <header class="folio" data-reveal>
+        <span class="folio__n">08</span><span class="folio__t">Agenda &amp; dúvidas</span><span class="folio__rule"></span><span class="folio__x">Info</span>
+    </header>
+
+    <div class="info__grid">
+        <article class="flyer" data-reveal="photo">
+            <p class="flyer__top mono"><span>Untold</span><span>Ao vivo</span><span>Jaú &amp; região</span></p>
+            <h2 class="flyer__title">Próximos<br>shows</h2>
+            <div class="flyer__stamp" aria-hidden="true">Datas<br>em breve</div>
+            <h3 class="flyer__status">Agenda em atualização</h3>
+            <p class="flyer__text">Novas datas serão divulgadas em breve. Siga nosso Instagram para acompanhar.</p>
+            <a class="btn btn--paper" href="https://www.instagram.com/banda.untold/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-instagram"/></svg>@banda.untold</a>
+            <p class="flyer__foot mono"><span>Bauru</span><span>Botucatu</span><span>Lençóis Paulista</span><span>Brotas</span><span>Ribeirão Preto</span></p>
+        </article>
+
+        <div class="faq">
+            <h2 class="headline faq__headline">
+                <span class="headline__big" data-reveal="mask">Dúvidas</span>
+                <span class="headline__serif" data-reveal="mask" style="--d:.12s">frequentes.</span>
+            </h2>
+            <div class="faq__list">
+                <details class="faq__item" data-reveal>
+                    <summary><span class="faq__n mono">Q1</span><span class="faq__q">Quanto tempo dura o show?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+                    <div class="faq__a"><p>Nosso formato padrão é de 2 horas a 2h30 de show direto, ou dividido em dois blocos. Mas somos totalmente flexíveis e podemos adaptar a duração de acordo com a necessidade do seu cronograma.</p></div>
+                </details>
+                <details class="faq__item" data-reveal style="--d:.06s">
+                    <summary><span class="faq__n mono">Q2</span><span class="faq__q">Vocês levam equipamento de som e luz?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+                    <div class="faq__a"><p>Possuímos nossos instrumentos (backline) completo e profissional. Para som de PA e iluminação da pista/palco, oferecemos o pacote completo caso o local não possua estrutura, garantindo qualidade total.</p></div>
+                </details>
+                <details class="faq__item" data-reveal style="--d:.12s">
+                    <summary><span class="faq__n mono">Q3</span><span class="faq__q">Atendem outras cidades além de Jaú?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+                    <div class="faq__a"><p>Sim! Tocamos em Bauru, Botucatu, Lençóis Paulista, Brotas, Ribeirão Preto e todo o interior de SP. Para viagens mais longas, calculamos apenas o custo de deslocamento/logística.</p></div>
+                </details>
+                <details class="faq__item" data-reveal style="--d:.18s">
+                    <summary><span class="faq__n mono">Q4</span><span class="faq__q">Posso escolher músicas pro repertório?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+                    <div class="faq__a"><p>Com certeza! Para eventos fechados (casamentos, corporativos), enviamos nosso setlist completo para você selecionar as preferidas e vetar o que não gosta. Também tiramos músicas especiais sob encomenda.</p></div>
+                </details>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     09 · CONTATO (chamada final)
+     ========================================================= -->
+<section class="section finale" id="contato">
+    <header class="folio" data-reveal>
+        <span class="folio__n">09</span><span class="folio__t">Contato</span><span class="folio__rule"></span><span class="folio__x">WhatsApp</span>
+    </header>
+    <div class="finale__grid">
+        <h2 class="finale__title">
+            <span data-reveal="mask">Pronto para</span>
+            <span data-reveal="mask" style="--d:.08s">levar <em>o rock</em></span>
+            <span data-reveal="mask" style="--d:.16s">para o seu</span>
+            <span data-reveal="mask" style="--d:.24s">evento?</span>
+        </h2>
+        <figure class="finale__photo ph" data-reveal="photo" data-parallax="-0.08">
+            <div class="ph__frame ph__frame--print">
+                <img src="assets/img/bw/foto-3.webp" data-color="assets/img/color/foto-3.webp" alt="A vista do palco: público lotado assistindo à Untold" width="500" height="375" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="caption mono">A vista do palco</figcaption>
+            <span class="tape tape--tc" aria-hidden="true"></span>
+        </figure>
+        <div class="finale__cta" data-reveal>
+            <p>Datas concorridas. Consulte nossa disponibilidade e garanta a energia da Banda Untold na sua festa.</p>
+            <a class="btn btn--red btn--xl" href="https://wa.me/5514997256404?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento%20da%20Banda%20Untold." target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Chamar no WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- =========================================================
+     RODAPÉ
+     ========================================================= -->
+<footer class="footer">
+    <div class="footer__grid">
+        <div class="footer__about">
+            <img src="assets/img/logo-u.png" alt="Logo da Untold" width="72" height="72" loading="lazy">
+            <p>Transformando eventos em experiências inesquecíveis com o melhor do Rock.</p>
+        </div>
+        <nav class="footer__col" aria-label="Rodapé">
+            <h4 class="mono">Navegação</h4>
+            <a href="#banda">A Banda</a>
+            <a href="#repertorio">Repertório</a>
+            <a href="#servicos">Onde tocamos</a>
+            <a href="#videos">Vídeos</a>
+            <a href="#musica">Spotify</a>
+        </nav>
+        <div class="footer__col">
+            <h4 class="mono">Contato</h4>
+            <span><svg aria-hidden="true"><use href="#i-pin"/></svg>Jaú-SP e Região</span>
+            <a href="tel:+5514997256404"><svg aria-hidden="true"><use href="#i-phone"/></svg>(14) 99725-6404</a>
+            <a href="mailto:bandaustories@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>bandaustories@gmail.com</a>
+        </div>
+        <div class="footer__col">
+            <h4 class="mono">Redes sociais</h4>
+            <div class="social">
+                <a href="https://www.instagram.com/banda.untold/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+                <a href="https://www.youtube.com/@bandauntold" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+                <a href="https://www.facebook.com/banda.untold" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+            </div>
+        </div>
+    </div>
+    <p class="footer__word" aria-hidden="true">UNTOLD</p>
+    <div class="footer__legal mono">
+        <span>&copy; <span data-year>2026</span> Banda Untold. Todos os direitos reservados. Jaú-SP.</span>
+        <span class="footer__credit">Desenvolvido por <a href="https://web.capinzaiki.com.br" target="_blank" rel="noopener">Capinzaiki</a></span>
+        <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+</footer>
+
+<!-- Botões fixos -->
+<a class="fab-wa" href="https://wa.me/5514997256404?text=Olá!%20Gostaria%20de%20um%20orçamento." target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+</a>
+<button class="fab-top" id="back-to-top" type="button" aria-label="Voltar ao topo"><svg aria-hidden="true"><use href="#i-arrow-up"/></svg></button>
+
+<!-- Modal (vídeos e fotos) -->
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-label="Mídia">
+    <div class="modal__backdrop" data-act="modal-close"></div>
+    <div class="modal__box">
+        <button class="modal__close" type="button" data-act="modal-close" aria-label="Fechar"><svg><use href="#i-close"/></svg></button>
+        <button class="modal__nav modal__nav--prev" type="button" data-act="modal-prev" aria-label="Foto anterior"><svg><use href="#i-arrow"/></svg></button>
+        <div class="modal__stage"></div>
+        <button class="modal__nav modal__nav--next" type="button" data-act="modal-next" aria-label="Próxima foto"><svg><use href="#i-arrow"/></svg></button>
+        <p class="modal__caption mono"></p>
+    </div>
+</div>
+
+<!-- Cursor personalizado (apenas mouse) -->
+<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><span class="cursor__label"></span></span></div>
+
+<!-- Configurações editáveis -->
+<script src="config/playlist.js"></script>
+<script src="config/spotify.js"></script>
+<script src="config/videos.js"></script>
+<script src="data/youtube-latest.js"></script>
+
+<!-- Scripts do site -->
+<script src="assets/js/player.js" defer></script>
+<script src="assets/js/media.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
