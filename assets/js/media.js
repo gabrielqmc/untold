@@ -176,6 +176,17 @@
     }
 
     /* =========================== VÍDEOS =========================== */
+    /* "Untold - Pintando Quadros (Ao Vivo no Casarão)"
+       → título "Pintando Quadros", local "Ao Vivo no Casarão" */
+    function parseTitle(raw) {
+        var t = String(raw).trim();
+        var venue = '';
+        t = t.replace(/^(banda\s+)?untold\s*[-–—|:]\s*/i, '');
+        var m = t.match(/\s*[(\[]((?:ao vivo|live|ac[uú]stico)[^)\]]*)[)\]]\s*$/i);
+        if (m) { venue = m[1].trim(); t = t.slice(0, m.index).trim(); }
+        var parts = t.split(/\s+[-–—|]\s+/);
+        return { title: parts[0] || t, artist: parts.length > 1 ? parts.slice(1).join(' · ') : '', venue: venue };
+    }
     (function videos() {
         var host = document.getElementById('video-list');
         if (!host) return;
@@ -194,10 +205,9 @@
 
         host.innerHTML = list.map(function (v, i) {
             var o = overrides[v.id] || {};
-            var raw = v.title || '';
-            var split = raw.split(/\s+[-–—|]\s+/);
-            var title = o.title || split[0] || raw;
-            var artist = o.artist || (split.length > 1 ? split.slice(1).join(' · ') : '');
+            var parsed = parseTitle(v.title || '');
+            var title = o.title || parsed.title;
+            var artist = o.artist || parsed.artist;
             var thumbRemote = 'https://i.ytimg.com/vi/' + encodeURIComponent(v.id) + '/hqdefault.jpg';
             var thumb = o.thumb || thumbRemote;
             var thumbBw = o.thumbBw || thumb;
@@ -213,7 +223,7 @@
                     dateLcd = ('0' + d.getDate()).slice(-2) + '.' + ('0' + (d.getMonth() + 1)).slice(-2) + '.' + d.getFullYear();
                 }
             }
-            var venue = [o.venue, date].filter(Boolean).join(' · ');
+            var venue = [o.venue || parsed.venue, date].filter(Boolean).join(' · ');
             var n = ('0' + (i + 1)).slice(-2);
             var label = 'Assistir: ' + title + (artist ? ' — ' + artist : '');
             return '' +
@@ -236,12 +246,17 @@
                 '</article>';
         }).join('');
 
-        host.querySelectorAll('.vid__color, .vid__bw').forEach(function (img) {
+        // Miniatura indisponível → tenta a padrão do YouTube → por fim, uma foto da banda
+        var localFallback = ['assets/img/bw/foto-1.webp', 'assets/img/bw/capa-1.webp', 'assets/img/bw/foto-2.webp'];
+        host.querySelectorAll('.vid__color, .vid__bw').forEach(function (img, n) {
             img.addEventListener('error', function () {
                 var id = img.closest('.vid__screen').dataset.video;
-                var fallback = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
-                if (img.src !== fallback) img.src = fallback;
-            }, { once: true });
+                var yt = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+                var step = +(img.dataset.fallback || 0);
+                img.dataset.fallback = step + 1;
+                if (step === 0 && img.src !== yt) img.src = yt;
+                else if (step <= 1) img.src = localFallback[Math.floor(n / 2) % localFallback.length];
+            });
         });
 
         host.addEventListener('click', function (e) {
