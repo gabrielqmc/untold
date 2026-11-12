@@ -1,0 +1,44 @@
+# Busca os vídeos mais recentes do canal da UNTOLD (feed público do YouTube)
+# e atualiza data/youtube-latest.js. Roda 1x por dia e pode ser disparado
+# manualmente em: GitHub → Actions → "YouTube · últimos vídeos" → Run workflow.
+name: YouTube · últimos vídeos
+
+on:
+  schedule:
+    - cron: "17 9 * * *"   # todo dia, 06:17 (horário de Brasília)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: youtube-latest
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Atualizar lista de vídeos
+        run: node scripts/update-youtube.mjs
+        # Opcional: defina o ID do canal (UC...) em Settings → Secrets and variables → Actions → Variables
+        env:
+          YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
+
+      - name: Commit (se houver vídeo novo)
+        run: |
+          if git diff --quiet -- data/youtube-latest.js; then
+            echo "Sem vídeos novos."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/youtube-latest.js
+          git commit -m "Atualiza últimos vídeos do YouTube"
+          git push
