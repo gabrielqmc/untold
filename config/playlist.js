@@ -45,5 +45,11 @@ window.UNTOLD_PLAYLIST = {
       info: "Ao vivo no Casarão 682"
     },
     */
+    {
+      src: "music/pearl-jam-dissident.mp3",
+      title: "Dissident",
+      artist: "Pearl Jam",
+      info: "Do repertório da UNTOLD"
+    },
   ]
 };

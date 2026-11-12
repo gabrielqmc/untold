@@ -49,6 +49,14 @@
     }
     function pad(n) { return (n < 10 ? '0' : '') + n; }
     function current() { return tracks[index]; }
+    /* próxima faixa que não deu erro, na direção dir (1 ou -1); -1 se nenhuma */
+    function nextWorking(from, dir) {
+        for (var k = 1; k <= tracks.length; k++) {
+            var i = ((from + dir * k) % tracks.length + tracks.length) % tracks.length;
+            if (!broken[i]) return i;
+        }
+        return -1;
+    }
 
     function setState(state) {
         deck.dataset.state = state;
@@ -230,7 +238,11 @@
         if (!audio.src) load(index);
         initGraph();
         if (graph && graph.ctx.state === 'suspended') graph.ctx.resume();
-        if (broken[index]) { lcdMessage('Faixa indisponível'); return; }
+        if (broken[index]) {
+            var alt = nextWorking(index, 1);
+            if (alt < 0) { wantPlay = false; lcdMessage('Faixa indisponível'); return; }
+            load(alt);
+        }
         setState('loading');
         var p = audio.play();
         if (p && p.catch) {
@@ -306,12 +318,15 @@
         markCurrent();
         setState('error');
         lcdMessage('Erro · faixa indisponível');
-        var working = tracks.filter(function (_, i) { return !broken[i]; }).length;
-        if (wantPlay && working > 0) {
-            skipTimer = setTimeout(function () { next(false); }, 1600);
-        } else {
+        var alt = nextWorking(index, 1);
+        if (alt < 0) {
             wantPlay = false;
             skipTimer = setTimeout(function () { setState('paused'); }, 1600);
+        } else if (wantPlay) {
+            skipTimer = setTimeout(function () { load(alt); play(); }, 1600);
+        } else {
+            // ainda não tocou: troca em silêncio para a próxima faixa válida
+            skipTimer = setTimeout(function () { load(alt); setState('paused'); }, 900);
         }
     });
 

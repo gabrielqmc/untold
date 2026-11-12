@@ -19,7 +19,7 @@
 
 window.UNTOLD_SPOTIFY = {
   /* Link ou URI da playlist oficial no Spotify */
-  url: "",
+  url: "https://open.spotify.com/playlist/2Ib87rJyN3y7edYhrzHRlP?si=5223ac1a18464d92",
 
   /* Nome e descrição exibidos ao lado do player */
   name: "UNTOLD — Playlist Oficial",

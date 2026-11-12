@@ -935,7 +935,7 @@ html.is-ready .hero .hero__stamp { transform: none; opacity: 1; }
     .hero { min-height: auto; }
     .hero__grid { display: contents; }
     .hero__print { order: 1; width: 88%; align-self: flex-end; margin-top: 28px; }
-    .hero__print .caption { right: auto; left: -30px; top: 8px; }
+    .hero__print .caption { display: none; }
     .hero__stamp { order: 1; left: var(--gutter); top: calc(var(--bar-h) + 150px); bottom: auto; }
     .hero__title { order: 2; margin-top: calc(-1 * 10vw); }
     .hero__word { font-size: 28.6vw; justify-content: flex-start; }
@@ -981,7 +981,7 @@ html.is-ready .hero .hero__stamp { transform: none; opacity: 1; }
     .hero__print { order: 1; margin-top: 16px; transform: rotate(.8deg); }
     .print { padding: 6px; }
     .print__edge { font-size: 8px; height: 16px; line-height: 16px; padding: 0 8px; }
-    .print__img { aspect-ratio: 4 / 4.2; max-height: none; }
+    .print__img { aspect-ratio: 4 / 4.2; max-height: 58svh; }
     .print__img img { object-position: 38% 60%; }
     .hero__print .caption { display: none; }
     .hero__print .tape--tl { top: -6px; left: -12px; width: 70px; height: 22px; }
