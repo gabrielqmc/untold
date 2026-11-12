@@ -134,7 +134,10 @@ html.has-cursor .cursor { display: block; position: fixed; inset: 0 auto auto 0;
 .cursor.is-media .cursor__label { opacity: 1; }
 .cursor.is-media .cursor__dot { opacity: 0; }
 .cursor.is-hidden .cursor__ring, .cursor.is-hidden .cursor__dot { opacity: 0; }
-.cursor.is-down .cursor__ring { transform-origin: center; scale: .85; }
+/* clique: encolhe o anel sem usar scale (scale afetaria a posição do cursor) */
+.cursor.is-down .cursor__ring { width: 30px; height: 30px; margin: -15px 0 0 -15px; }
+.cursor.is-link.is-down .cursor__ring { width: 48px; height: 48px; margin: -24px 0 0 -24px; }
+.cursor.is-media.is-down .cursor__ring { width: 78px; height: 78px; margin: -39px 0 0 -39px; }
 
 /* 06 · BOTÕES E LINKS ------------------------------------------------------ */
 .btn {
@@ -537,8 +540,8 @@ html.has-cursor .cursor { display: block; position: fixed; inset: 0 auto auto 0;
 .dropcap::first-letter { float: left; font: 400 5.4em/.78 var(--f-display); color: var(--red-hot); margin: .06em .1em 0 0; }
 .dropcap { color: var(--paper); font-size: 1.12em; line-height: 1.55; }
 .checks { display: grid; gap: 10px; margin: 6px 0 8px; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--paper); }
-.checks li { display: flex; gap: 12px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
-.checks li::before { content: "✕"; color: var(--red-hot); font-weight: 700; }
+.checks li { display: flex; gap: 14px; align-items: center; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
+.checks li::before { content: ""; flex: none; width: 13px; height: 7px; margin: -4px 1px 0 2px; border-left: 2px solid var(--red-hot); border-bottom: 2px solid var(--red-hot); transform: rotate(-45deg); }
 
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(72px, 10vw, 150px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .stat { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 14px; padding: clamp(22px, 3vw, 40px) clamp(14px, 2vw, 28px); border-left: 1px solid var(--line); }
