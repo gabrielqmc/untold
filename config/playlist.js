@@ -75,5 +75,10 @@ window.UNTOLD_PLAYLIST = {
       artist: "Led Zeppelin",
       info: "Do repertório da UNTOLD"
     },
+    {
+      src: "music/blue-oyster-cult-burnin-for-you.mp3",
+      title: "Burnin' for You",
+      artist: "Blue Öyster Cult"
+    },
   ]
 };
