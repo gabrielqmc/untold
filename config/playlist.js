@@ -51,5 +51,34 @@ window.UNTOLD_PLAYLIST = {
       artist: "Pearl Jam",
       info: "Do repertório da UNTOLD"
     },
+    {
+      src: "music/skank-saideira.mp3",
+      title: "Saideira",
+      artist: "Skank",
+      info: "Do repertório da UNTOLD"
+    },
+    {
+      src: "music/black-sabbath-war-pigs.mp3",
+      title: "War Pigs",
+      artist: "Black Sabbath",
+      info: "Do repertório da UNTOLD"
+    },
+    {
+      src: "music/charlie-brown-jr-proibida-pra-mim.mp3",
+      title: "Proibida Pra Mim",
+      artist: "Charlie Brown Jr.",
+      info: "Do repertório da UNTOLD"
+    },
+    {
+      src: "music/led-zeppelin-whole-lotta-love.mp3",
+      title: "Whole Lotta Love",
+      artist: "Led Zeppelin",
+      info: "Do repertório da UNTOLD"
+    },
+    {
+      src: "music/blue-oyster-cult-burnin-for-you.mp3",
+      title: "Burnin' for You",
+      artist: "Blue Öyster Cult"
+    },
   ]
 };
